@@ -5,7 +5,8 @@ using UnityEngine;
 public class Attacks : MonoBehaviour
 {
      public GameObject smallfist;
-     public GameObject MediumFist;    
+     public GameObject MediumFist;
+     public GameObject BigFist;
     
 
    
@@ -33,6 +34,34 @@ public class Attacks : MonoBehaviour
         {
             smallfist.SetActive(false);
             MediumFist.SetActive(false);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            smallfist.SetActive(true);
+            MediumFist.SetActive(true);
+            BigFist.SetActive(true);
+        }
+
+        if (Input.GetKeyUp(KeyCode.Q))
+        {
+            smallfist.SetActive(false);
+            MediumFist.SetActive(false);
+            BigFist.SetActive(false);
+        }
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            smallfist.SetActive(true);
+            MediumFist.SetActive(true);
+            BigFist.SetActive(true);
+        }
+
+        if (Input.GetKeyUp(KeyCode.E))
+        {
+            smallfist.SetActive(false);
+            MediumFist.SetActive(false);
+            BigFist.SetActive(false);
         }
     }
 
