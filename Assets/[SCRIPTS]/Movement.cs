@@ -3,29 +3,32 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     [SerializeField] private float _speed = default;
-    [SerializeField] private float _jumpspeed = default;
-    [SerializeField] private float _movement = default;
-
-    
+    [SerializeField] private float _jumpSpeed = default;
 
     void Update()
     {
         if (Input.GetKey(KeyCode.D))
         {
-            Move();
+            Move(1);
         }
         if (Input.GetKey(KeyCode.A))
         {
-            transform.Translate(-1 * _speed * Time.deltaTime, 0, 0);
+            Move(2);
         }
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            transform.Translate(0, 3 * Time.deltaTime * _jumpspeed, 0);
+            Jump();
         }
     }
 
-    void Move()
+    void Move(int direction)
     {
         transform.Translate(1 * _speed * Time.deltaTime, 0, 0);
     }
+    void Jump()
+    {
+        
+        transform.Translate(0, Time.deltaTime * _jumpSpeed, 0);
+    }
+
 }
