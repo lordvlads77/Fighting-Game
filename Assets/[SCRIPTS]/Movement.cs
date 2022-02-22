@@ -8,7 +8,7 @@ public class Movement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        speed = 0.1f;
+        speed = 10f;
     }
 
     // Update is called once per frame
@@ -17,21 +17,21 @@ public class Movement : MonoBehaviour
         if (Input.GetKey(KeyCode.D))
         {
 
-            transform.Translate(1, 0, 0 * Time.deltaTime * speed);
+            transform.Translate(1 * speed * Time.deltaTime, 0, 0);
 
         }
 
         if (Input.GetKey(KeyCode.A))
         {
 
-            transform.Translate(1, 0, 0 * Time.deltaTime * speed);
+            transform.Translate(-1 * speed * Time.deltaTime, 0, 0);
 
         }
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
 
-            transform.Translate(0, 1, 0 * Time.deltaTime * speed);
+            transform.Translate(0, 3, 0 * Time.deltaTime * speed);
 
         }
     }
