@@ -3,7 +3,7 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     [SerializeField] private float _speed = default;
-    [SerializeField] private float _jumpSpeed = default;
+    [SerializeField] private int _jumpSpeed = default;
 
     void Update()
     {
@@ -13,7 +13,7 @@ public class Movement : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.A))
         {
-            Move(2);
+            Move(-1);
         }
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -23,12 +23,11 @@ public class Movement : MonoBehaviour
 
     void Move(int direction)
     {
-        transform.Translate(1 * _speed * Time.deltaTime, 0, 0);
+        transform.Translate(direction * _speed * Time.deltaTime, 0, 0);
     }
+    
     void Jump()
-    {
-        
-        transform.Translate(0, Time.deltaTime * _jumpSpeed, 0);
+    {   
+        transform.Translate(0, _jumpSpeed * _speed * Time.deltaTime, 0);
     }
-
 }
