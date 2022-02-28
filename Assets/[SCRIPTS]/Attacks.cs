@@ -2,17 +2,15 @@ using UnityEngine;
 
 public class Attacks : MonoBehaviour
 {
-     [SerializeField] private GameObject smallFist;
-     [SerializeField] private GameObject mediumFist;
-     [SerializeField] private GameObject bigFist;
+     [SerializeField] private GameObject smallFist = default;
+     [SerializeField] private GameObject mediumFist = default;
+     [SerializeField] private GameObject bigFist = default;
 
      void Update()
     {
         if (Input.GetKeyDown(KeyCode.S))
         {
-            
             smallFist.SetActive(true);
-
         }
         if (Input.GetKeyUp(KeyCode.S))
         {
