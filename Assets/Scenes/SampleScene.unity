@@ -1052,7 +1052,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 10
-  _jumpSpeed: 30
+  _jumpSpeed: 50
 --- !u!212 &1370164295
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1180,9 +1180,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1691fb4f3884da441b6b0aad4cfcba91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  smallFist: {fileID: 112846720}
-  mediumFist: {fileID: 782210945}
-  bigFist: {fileID: 1757681415}
+  _smallFist: {fileID: 112846720}
+  _mediumFist: {fileID: 782210945}
+  _bigFist: {fileID: 1757681415}
 --- !u!1 &1757681415
 GameObject:
   m_ObjectHideFlags: 0
