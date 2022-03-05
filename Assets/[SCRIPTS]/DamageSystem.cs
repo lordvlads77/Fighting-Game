@@ -3,8 +3,21 @@ using UnityEngine.UI;
 
 public class DamageSystem : MonoBehaviour
 {
-    [SerializeField] private int life = default;
+    [SerializeField] private int _life = default;
     [SerializeField] private Slider _healthSlider = default;
+    [SerializeField] private GameObject _EndScreen = default;
+    [SerializeField] private GameObject _PlayerScriptDeath = default;
+
+    private void Update()
+    {
+        if (_life <= 0)
+        {
+            _EndScreen.SetActive(true);
+            _PlayerScriptDeath.GetComponent<Movement>().enabled = false;
+            _PlayerScriptDeath.GetComponent<Attacks>().enabled = false;
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D col)
     {
         switch (col.gameObject.tag)
@@ -34,7 +47,7 @@ public class DamageSystem : MonoBehaviour
     {
         for(int i = 0; i < amount; i++)
         {
-            life--;
+            _life--;
         }
     }
 

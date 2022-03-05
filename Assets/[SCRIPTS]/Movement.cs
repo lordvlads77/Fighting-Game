@@ -4,6 +4,7 @@ public class Movement : MonoBehaviour
 {
     [SerializeField] private float _speed = default;
     [SerializeField] private int _jumpSpeed = default;
+    [SerializeField] public GameObject _ScreenPause = default;
 
     void Update()
     {
@@ -18,6 +19,11 @@ public class Movement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Jump();
+        }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            _ScreenPause.SetActive(true);
+            Time.timeScale = 0;
         }
     }
 

@@ -1,24 +1,24 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+
 public class GUI : MonoBehaviour
 {
-    [SerializeField] private Canvas _canvasIU = default;
-    [SerializeField] private GameObject lostPanel = default;
+    [SerializeField] private GameObject _PlayScreen = default;
+    [SerializeField] private Movement _movement = default;
+
     void Start()
     {
-        if (_canvasIU.enabled == true)
-        {
-            Time.timeScale = 0;
-        }
+        Time.timeScale = 0;
     }
 
-    [SerializeField] private void buttonPlay()
+    public void ButtonPlay()
     {
-        _canvasIU.enabled = false;
+        _PlayScreen.SetActive(false);
+        _movement._ScreenPause.SetActive(false);
         Time.timeScale = 1;
     }
 
-    public void buttonAgain()
+    public void ButtonAgain()
     {
         SceneManager.LoadScene(0);
     }
