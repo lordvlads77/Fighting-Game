@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="3a17a00c-3af9-4c60-ad81-2e00aff315f6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project-Pegasus/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project-Pegasus/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/[SCRIPTS]/DamageSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[SCRIPTS]/DamageSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[SCRIPTS]/HealthBar.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[SCRIPTS]/HealthBar.cs.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,6 +62,7 @@
       <workItem from="1645917741651" duration="9264000" />
       <workItem from="1645932143927" duration="410000" />
       <workItem from="1646445862224" duration="3608000" />
+      <workItem from="1646461263965" duration="771000" />
     </task>
     <servers />
   </component>
