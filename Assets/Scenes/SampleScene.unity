@@ -344,6 +344,8 @@ MonoBehaviour:
   _speed2: 10
   _jumpSpeed2: 20
   _ScreenPause2: {fileID: 1605872421}
+  _Horizontal1: 275
+  _Horizontal2: 276
 --- !u!114 &407212752
 MonoBehaviour:
   m_ObjectHideFlags: 0
