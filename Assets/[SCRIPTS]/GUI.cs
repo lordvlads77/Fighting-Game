@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class GUI : MonoBehaviour
 {
-    [SerializeField] private GameObject _PlayScreen = default;
+    [SerializeField] private GameObject _playScreen = default;
     [SerializeField] private Movement _movement = default;
 
     void Start()
@@ -13,7 +13,7 @@ public class GUI : MonoBehaviour
 
     public void ButtonPlay()
     {
-        _PlayScreen.SetActive(false);
+        _playScreen.SetActive(false);
         _movement._ScreenPause.SetActive(false);
         Time.timeScale = 1;
     }
