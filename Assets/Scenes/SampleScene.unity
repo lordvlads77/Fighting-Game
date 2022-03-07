@@ -320,8 +320,8 @@ GameObject:
   - component: {fileID: 407212755}
   - component: {fileID: 407212754}
   - component: {fileID: 407212753}
-  - component: {fileID: 407212752}
   - component: {fileID: 407212751}
+  - component: {fileID: 407212752}
   m_Layer: 0
   m_Name: Player2
   m_TagString: Untagged
@@ -338,14 +338,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 407212750}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee2e5c0596ead644fb7c5594dc913d4f, type: 3}
+  m_Script: {fileID: 11500000, guid: ea3a1705ee9803c49b91456f590120cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed2: 10
-  _jumpSpeed2: 20
-  _ScreenPause2: {fileID: 1605872421}
-  _Horizontal1: 275
-  _Horizontal2: 276
+  _speed: 10
+  _jumpSpeed: 20
+  _screenPause: {fileID: 1605872421}
+  _horizontalL: 260
+  _horizontalR: 262
+  _jumpL: 275
+  _pause: 277
 --- !u!114 &407212752
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -355,12 +357,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 407212750}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1ee3ede6e41b664b96826493e97856d, type: 3}
+  m_Script: {fileID: 11500000, guid: 1691fb4f3884da441b6b0aad4cfcba91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _smallFist2: {fileID: 658155923}
-  _mediumFist2: {fileID: 1098191187}
-  _bigFist2: {fileID: 2028771302}
+  _smallFist: {fileID: 658155923}
+  _mediumFist: {fileID: 1098191187}
+  _bigFist: {fileID: 2028771302}
+  _lightAttack: 261
+  _mediumAttack: 264
+  _hardAttack: 263
 --- !u!114 &407212753
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1886,7 +1891,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d220b02d8937ea44c82343c16b3be476, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _PlayScreen: {fileID: 1491915124}
+  _playScreen: {fileID: 1491915124}
   _movement: {fileID: 1370164294}
 --- !u!114 &1117948759
 MonoBehaviour:
@@ -2832,7 +2837,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 10
   _jumpSpeed: 20
-  _ScreenPause: {fileID: 1605872421}
+  _screenPause: {fileID: 1605872421}
+  _horizontalL: 97
+  _horizontalR: 100
+  _jumpL: 32
+  _pause: 27
 --- !u!212 &1370164295
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2964,6 +2973,9 @@ MonoBehaviour:
   _smallFist: {fileID: 112846720}
   _mediumFist: {fileID: 782210945}
   _bigFist: {fileID: 1757681415}
+  _lightAttack: 115
+  _mediumAttack: 119
+  _hardAttack: 113
 --- !u!114 &1370164300
 MonoBehaviour:
   m_ObjectHideFlags: 0
