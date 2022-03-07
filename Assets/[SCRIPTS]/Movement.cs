@@ -27,12 +27,12 @@ public class Movement : MonoBehaviour
         }
     }
 
-    void Move(int direction)
+    public void Move(int direction)
     {
         transform.Translate(direction * _speed * Time.deltaTime, 0, 0);
     }
     
-    void Jump()
+    public void Jump()
     {   
         transform.Translate(0, _jumpSpeed * _speed * Time.deltaTime, 0);
     }
