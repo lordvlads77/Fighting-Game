@@ -14,7 +14,7 @@ public class GUI : MonoBehaviour
     public void ButtonPlay()
     {
         _playScreen.SetActive(false);
-        _movement._ScreenPause.SetActive(false);
+        _movement._screenPause.SetActive(false);
         Time.timeScale = 1;
     }
 
