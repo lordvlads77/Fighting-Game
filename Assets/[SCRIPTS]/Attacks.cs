@@ -5,9 +5,12 @@ public class Attacks : MonoBehaviour
      [SerializeField] private GameObject _smallFist = default;
      [SerializeField] private GameObject _mediumFist = default;
      [SerializeField] private GameObject _bigFist = default;
+     [SerializeField] private GameObject _ComboFist = default;
      [SerializeField] private KeyCode _lightAttack = default;
      [SerializeField] private KeyCode _mediumAttack = default;
      [SerializeField] private KeyCode _hardAttack = default;
+     [SerializeField] private KeyCode _ComboAttack = default;
+     [SerializeField] private KeyCode _CombondKey = default;
 
      void Update()
     {
@@ -18,6 +21,14 @@ public class Attacks : MonoBehaviour
         if (Input.GetKeyUp(_lightAttack))
         {
             _smallFist.SetActive(false);
+        }
+        if (Input.GetKeyDown(_ComboAttack) && (Input.GetKeyDown(_CombondKey)))
+        {
+            _ComboFist.SetActive(true);
+        }
+        if (Input.GetKeyUp(_ComboAttack))
+        {
+            _ComboFist.SetActive(false);
         }
         if (Input.GetKeyDown(_mediumAttack))
         {

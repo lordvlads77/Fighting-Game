@@ -24,6 +24,11 @@ public class DamageSystem : MonoBehaviour
                 ReduceLife(1);
                 ReduceLifeUI(1);
                 break;
+
+            case "ComboFist":
+                ReduceLife(5);
+                ReduceLifeUI(5);
+                break;
             
             case "mediumFist":
                 ReduceLife(2);
