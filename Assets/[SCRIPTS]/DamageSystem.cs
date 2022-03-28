@@ -34,12 +34,14 @@ public class DamageSystem : MonoBehaviour
                 ReduceLife(2);
                 ReduceLifeUI(2);
                 break;
-            
             case "bigFist":
                 ReduceLife(3);
                 ReduceLifeUI(3);
                 break;
-
+            case "block":
+                ReduceLife(0);
+                ReduceLifeUI(0);
+                break;
             default:
                 Debug.Log("che switch");
                 break;
