@@ -5,12 +5,9 @@ public class Attacks : MonoBehaviour
      [SerializeField] private GameObject _smallFist = default;
      [SerializeField] private GameObject _mediumFist = default;
      [SerializeField] private GameObject _bigFist = default;
-     [SerializeField] private GameObject _blockFist = default;
-     [SerializeField] private GameObject _Playercol = default;
      [SerializeField] private KeyCode _lightAttack = default;
      [SerializeField] private KeyCode _mediumAttack = default;
      [SerializeField] private KeyCode _hardAttack = default;
-     [SerializeField] private KeyCode _blockMove = default;
 
      void Update()
     {
@@ -49,16 +46,6 @@ public class Attacks : MonoBehaviour
             _mediumFist.SetActive(false);
             _mediumFist.GetComponent<BoxCollider2D>().enabled = true;
             _bigFist.SetActive(false);
-        }
-        if (Input.GetKeyDown(_blockMove))
-        {
-            _blockFist.SetActive(true);
-            _Playercol.GetComponent<BoxCollider2D>().enabled = false;
-        }
-        if (Input.GetKeyUp(_blockMove))
-        {
-            _blockFist.SetActive(false);
-            _Playercol.GetComponent<BoxCollider2D>().enabled = true;
         }
     }
 }
