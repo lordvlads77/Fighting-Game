@@ -8,6 +8,7 @@ TagManager:
   - smallFist
   - mediumFist
   - bigFist
+  - ComboFist
   layers:
   - Default
   - TransparentFX
