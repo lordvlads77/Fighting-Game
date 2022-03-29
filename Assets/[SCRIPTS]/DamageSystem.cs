@@ -1,10 +1,28 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DamageSystem : MonoBehaviour
 {
-    private void Update()
+    [Header("LifeSystem")]
+    [SerializeField] private int _playerNumber = default;
+    [SerializeField] private int _life = default;
+    [SerializeField] private Slider _healthSlider = default;
+    
+    public void MinusLife(int amount)
     {
-       
+        for (int i = 0; i < amount; i++)
+        {
+            _life--;
+            if (_life <= 0)
+            {
+                GameManager.Instance.PlayerDeath(_playerNumber);
+            }
+        }
+    }
+
+    public void UpdateSlider()
+    {
+        _healthSlider.value = _life;
     }
 
     private void OnTriggerEnter2D(Collider2D col)
@@ -12,24 +30,18 @@ public class DamageSystem : MonoBehaviour
         switch (col.gameObject.tag)
         {
             case "smallFist":
-                GameManager.Instance.MinusLife(1);
-                GameManager.Instance.MinusLifeGUI(1);
+                MinusLife(1);
                 break;
-            
             case "mediumFist":
-                GameManager.Instance.MinusLife(2);
-                GameManager.Instance.MinusLifeGUI(2);
+                MinusLife(2);
                 break;
-            
             case "bigFist":
-                GameManager.Instance.MinusLife(3);
-                GameManager.Instance.MinusLifeGUI(3);
+                MinusLife(3);
                 break;
-
             default:
-                Debug.Log("good switch");
                 break;
         }
+
+        UpdateSlider();
     }
-    
 }
