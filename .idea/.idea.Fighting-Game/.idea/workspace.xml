@@ -21,6 +21,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="rider.run.widget.enabled.cache" value="false" />
+    <property name="settings.editor.selected.configurable" value="ReSharper" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -54,7 +55,9 @@
       <option name="presentableId" value="Default" />
       <updated>1646057442762</updated>
       <workItem from="1646057448885" duration="159000" />
-      <workItem from="1648479056362" duration="181000" />
+      <workItem from="1648560487904" duration="450000" />
+      <workItem from="1648561056762" duration="3352000" />
+      <workItem from="1648564641409" duration="954000" />
     </task>
     <servers />
   </component>
@@ -66,5 +69,9 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

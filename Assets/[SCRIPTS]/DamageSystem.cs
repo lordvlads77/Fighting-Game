@@ -3,17 +3,26 @@ using UnityEngine.UI;
 
 public class DamageSystem : MonoBehaviour
 {
+    [Header("LifeSystem")]
+    [SerializeField] private int _playerNumber = default;
     [SerializeField] private int _life = default;
     [SerializeField] private Slider _healthSlider = default;
-    [SerializeField] private GameObject _EndScreen = default;
-
-    private void Update()
+    
+    public void MinusLife(int amount)
     {
-        if (_life <= 0)
+        for (int i = 0; i < amount; i++)
         {
-            _EndScreen.SetActive(true);
-            Time.timeScale = 0;
+            _life--;
+            if (_life <= 0)
+            {
+                GameManager.Instance.PlayerDeath(_playerNumber);
+            }
         }
+    }
+
+    public void UpdateSlider()
+    {
+        _healthSlider.value = _life;
     }
 
     private void OnTriggerEnter2D(Collider2D col)
@@ -21,46 +30,21 @@ public class DamageSystem : MonoBehaviour
         switch (col.gameObject.tag)
         {
             case "smallFist":
-                ReduceLife(1);
-                ReduceLifeUI(1);
+                MinusLife(1);
                 break;
-
-            case "ComboFist":
-                ReduceLife(5);
-                ReduceLifeUI(5);
-                break;
-            
             case "mediumFist":
-                ReduceLife(2);
-                ReduceLifeUI(2);
+                MinusLife(2);
                 break;
             case "bigFist":
-                ReduceLife(3);
-                ReduceLifeUI(3);
+                MinusLife(3);
                 break;
             case "block":
-                ReduceLife(0);
-                ReduceLifeUI(0);
+                MinusLife(0);
                 break;
             default:
-                Debug.Log("che switch");
                 break;
         }
-    }
 
-    private void ReduceLife(int amount)
-    {
-        for(int i = 0; i < amount; i++)
-        {
-            _life--;
-        }
-    }
-
-    private void ReduceLifeUI(int amount)
-    {
-        for (int i = 0; i < amount; i++)
-        {
-            _healthSlider.value--;
-        }
+        UpdateSlider();
     }
 }
