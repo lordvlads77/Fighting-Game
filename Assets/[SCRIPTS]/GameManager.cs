@@ -1,13 +1,14 @@
+using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private GameObject _EndScreen = default;
     public static GameManager Instance { get; private set; }
-
+    
     private void Awake()
     {
+        FindObjectOfType<TextMeshProUGUI>();
         Instance = this;
         if (Instance != this)
         {
@@ -21,4 +22,18 @@ public class GameManager : MonoBehaviour
         _EndScreen.SetActive(true);
         Time.timeScale = 0;
     }
+
+    public void PlayerWin(TextMeshProUGUI _winnerName, int playerNumber, int _playerWinner)
+    {
+        if (playerNumber == 1)
+        {
+            _playerWinner = 2;
+        }
+        else if (playerNumber != 1)
+        {
+            _playerWinner = 1;
+        }
+        _winnerName.text = $"Player {_playerWinner}!!";
+    }
+    
 }

@@ -5,7 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project-Pegasus/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project-Pegasus/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/[SCRIPTS]/DamageSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[SCRIPTS]/DamageSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/[SCRIPTS]/Movement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[SCRIPTS]/Movement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[SCRIPTS]/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[SCRIPTS]/GameManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +38,14 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="E:/Project Codename Pegasus\Fighting Game.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="E:\Project Codename Pegasus" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
@@ -76,6 +84,7 @@
       <workItem from="1646509435567" duration="2088000" />
       <workItem from="1646513509021" duration="9804000" />
       <workItem from="1646636001725" duration="5045000" />
+      <workItem from="1648786059045" duration="6832000" />
     </task>
     <servers />
   </component>
