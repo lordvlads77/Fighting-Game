@@ -47,6 +47,9 @@ public class DamageSystem : MonoBehaviour
             case "block":
                 MinusLife(0);
                 break;
+            case "ComboFist":
+                MinusLife(5);
+                break;
             default:
                 break;
         }
