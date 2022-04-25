@@ -32,7 +32,7 @@ public class Movement : MonoBehaviour
 
     public void Move(int direction)
     {
-        transform.Translate(direction * _speed * Time.deltaTime, 0, 0);
+        transform.Translate(0, 0, direction * _speed * Time.deltaTime);
     }
     
     public void Jump()
