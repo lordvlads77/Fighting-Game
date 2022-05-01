@@ -2204,6 +2204,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9588702, guid: b81ba67e44b1b174d9ef4491f146ee35, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 61a1d671c927e754f9544407f409187b, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b81ba67e44b1b174d9ef4491f146ee35, type: 3}
 --- !u!1 &969967139
@@ -2642,7 +2646,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playScreen: {fileID: 1491915124}
-  _movement: {fileID: 0}
+  _movement: {fileID: 1770073061}
 --- !u!114 &1117948759
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3197,8 +3201,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 0.8823308, z: 0.78618973}
+  m_Center: {x: 4.0769813e-17, y: -0.05883468, z: -0.059631065}
 --- !u!23 &1205934997
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3879,7 +3883,6 @@ GameObject:
   - component: {fileID: 1370164297}
   - component: {fileID: 1370164298}
   - component: {fileID: 1370164299}
-  - component: {fileID: 1370164300}
   m_Layer: 0
   m_Name: Player1
   m_TagString: Untagged
@@ -4029,23 +4032,6 @@ MonoBehaviour:
   _blockFist: {fileID: 1352513367}
   _Playercol: {fileID: 2075689254}
   _blockMove: 114
---- !u!114 &1370164300
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1370164293}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0fe353ee4adc1d4fb14d90f4ade2c27, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _playerNumber: 1
-  _life: 100
-  _healthSlider: {fileID: 1208474833}
-  _winnerName: {fileID: 1336130911}
-  _PlayerWinner: 0
 --- !u!1 &1448967988
 GameObject:
   m_ObjectHideFlags: 0
@@ -4887,6 +4873,23 @@ MonoBehaviour:
   _horizontalR: 100
   _jumpL: 32
   _pause: 27
+--- !u!114 &1770073062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1770073060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0fe353ee4adc1d4fb14d90f4ade2c27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerNumber: 1
+  _life: 100
+  _healthSlider: {fileID: 1208474833}
+  _winnerName: {fileID: 1336130911}
+  _PlayerWinner: 0
 --- !u!4 &1770073063 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 440288, guid: b81ba67e44b1b174d9ef4491f146ee35, type: 3}
