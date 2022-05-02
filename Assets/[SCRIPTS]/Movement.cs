@@ -9,16 +9,26 @@ public class Movement : MonoBehaviour
     [SerializeField] private KeyCode _horizontalR = default;
     [SerializeField] private KeyCode _jumpL = default;
     [SerializeField] private KeyCode _pause = default;
+    
+    [Header("Animation Stuff")]
+    [SerializeField] private Animator _animator = default;
+    private readonly int _ahSpeed = Animator.StringToHash("speed");
 
     void Update()
     {
         if (Input.GetKey(_horizontalL))
         {
             Move(-1);
+            _animator.SetInteger(_ahSpeed, 2);
+        }
+        if (Input.GetKeyUp(_horizontalL))
+        {
+            _animator.SetInteger(_ahSpeed, 1);
         }
         if (Input.GetKey(_horizontalR))
         {
             Move(1);
+            _animator.SetInteger(_ahSpeed, 4);
         }
         if (Input.GetKeyDown(_jumpL))
         {
@@ -27,6 +37,10 @@ public class Movement : MonoBehaviour
         if (Input.GetKeyDown(_pause))
         {
             Pause();
+        }
+        if (Input.GetKeyUp(_horizontalR))
+        {
+            _animator.SetInteger(_ahSpeed, 0);
         }
     }
 

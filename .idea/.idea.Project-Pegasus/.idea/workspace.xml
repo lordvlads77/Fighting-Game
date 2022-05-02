@@ -4,6 +4,10 @@
     <list default="true" id="3a17a00c-3af9-4c60-ad81-2e00aff315f6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project-Pegasus/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project-Pegasus/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[ANIMATIONS]/Block.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[ANIMATIONS]/Block.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[ANIMATIONS]/HardPunch.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[ANIMATIONS]/HardPunch.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[ANIMATIONS]/PlayerPunch.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[ANIMATIONS]/PlayerPunch.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[SCRIPTS]/Movement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[SCRIPTS]/Movement.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +87,8 @@
       <workItem from="1646513509021" duration="9804000" />
       <workItem from="1646636001725" duration="5045000" />
       <workItem from="1648786059045" duration="6832000" />
-      <workItem from="1651368098824" duration="1989000" />
+      <workItem from="1651368098824" duration="1992000" />
+      <workItem from="1651511495158" duration="2673000" />
     </task>
     <servers />
   </component>
