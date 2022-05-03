@@ -20,7 +20,7 @@ public class Attacks : MonoBehaviour
         if (Input.GetKeyDown(_lightAttack))
         {
             _smallFist.SetActive(true);
-            AnimationManager.Instance.LightPunch();
+            AnimationController.Instance.LightPunch();
         }
         if (Input.GetKeyUp(_lightAttack))
         {
@@ -29,7 +29,7 @@ public class Attacks : MonoBehaviour
         if (Input.GetKeyDown(_ComboAttack) && (Input.GetKeyDown(_CombondKey)))
         {
             _ComboFist.SetActive(true);
-            AnimationManager.Instance.ComboPunch();
+            AnimationController.Instance.ComboPunch();
         }
         if (Input.GetKeyUp(_ComboAttack))
         {
@@ -40,7 +40,7 @@ public class Attacks : MonoBehaviour
             _smallFist.SetActive(true);
             _smallFist.GetComponent<BoxCollider>().enabled = false;
             _mediumFist.SetActive(true);
-            AnimationManager.Instance.MediumPuch();
+            AnimationController.Instance.MediumPuch();
         }
         if (Input.GetKeyUp(_mediumAttack))
         {
@@ -55,7 +55,7 @@ public class Attacks : MonoBehaviour
             _mediumFist.SetActive(true);
             _mediumFist.GetComponent<BoxCollider>().enabled = false;
             _bigFist.SetActive(true);
-            AnimationManager.Instance.HardPunch();
+            AnimationController.Instance.HardPunch();
         }
         if (Input.GetKeyUp(_hardAttack))
         {
@@ -68,12 +68,11 @@ public class Attacks : MonoBehaviour
         if (Input.GetKeyDown(_blockMove))
         {
             _blockFist.SetActive(true);
-            _Playercol.GetComponent<BoxCollider>().enabled = false;
+            AnimationController.Instance.Block();
         }
         if (Input.GetKeyUp(_blockMove))
         {
             _blockFist.SetActive(false);
-            _Playercol.GetComponent<BoxCollider>().enabled = true;
         }
     }
 }

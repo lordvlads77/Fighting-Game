@@ -9,6 +9,7 @@ public class Movement : MonoBehaviour
     [SerializeField] private KeyCode _horizontalR = default;
     [SerializeField] private KeyCode _jumpL = default;
     [SerializeField] private KeyCode _pause = default;
+    [SerializeField] private KeyCode _flipCharacter = default;
     
     [Header("Animation Stuff")]
     [SerializeField] private Animator _animator = default;
@@ -21,6 +22,10 @@ public class Movement : MonoBehaviour
         {
             Move(-1);
             _animator.SetInteger(_ahSpeed, 2);
+        }
+        if (Input.GetKeyDown(_flipCharacter))
+        {
+            transform.Rotate(0, 180, 0);
         }
         if (Input.GetKeyUp(_horizontalL))
         {
@@ -60,5 +65,10 @@ public class Movement : MonoBehaviour
     {
         _screenPause.SetActive(true);
         Time.timeScale = 0;
+    }
+
+    public void FlipMove(int direction)
+    {
+        transform.Translate(0, 0, direction * _speed * Time.deltaTime);
     }
 }
