@@ -13,6 +13,7 @@ public class Movement : MonoBehaviour
     [Header("Animation Stuff")]
     [SerializeField] private Animator _animator = default;
     private readonly int _ahSpeed = Animator.StringToHash("speed");
+    private readonly int _ahJump = Animator.StringToHash("jump");
 
     void Update()
     {
@@ -33,6 +34,7 @@ public class Movement : MonoBehaviour
         if (Input.GetKeyDown(_jumpL))
         {
             Jump();
+            _animator.SetTrigger(_ahJump);
         }
         if (Input.GetKeyDown(_pause))
         {

@@ -20,6 +20,7 @@ public class Attacks : MonoBehaviour
         if (Input.GetKeyDown(_lightAttack))
         {
             _smallFist.SetActive(true);
+            AnimationManager.Instance.LightPunch();
         }
         if (Input.GetKeyUp(_lightAttack))
         {
@@ -28,6 +29,7 @@ public class Attacks : MonoBehaviour
         if (Input.GetKeyDown(_ComboAttack) && (Input.GetKeyDown(_CombondKey)))
         {
             _ComboFist.SetActive(true);
+            AnimationManager.Instance.ComboPunch();
         }
         if (Input.GetKeyUp(_ComboAttack))
         {
@@ -36,40 +38,42 @@ public class Attacks : MonoBehaviour
         if (Input.GetKeyDown(_mediumAttack))
         {
             _smallFist.SetActive(true);
-            _smallFist.GetComponent<BoxCollider2D>().enabled = false;
+            _smallFist.GetComponent<BoxCollider>().enabled = false;
             _mediumFist.SetActive(true);
+            AnimationManager.Instance.MediumPuch();
         }
         if (Input.GetKeyUp(_mediumAttack))
         {
             _smallFist.SetActive(false);
-            _smallFist.GetComponent<BoxCollider2D>().enabled = true;
+            _smallFist.GetComponent<BoxCollider>().enabled = true;
             _mediumFist.SetActive(false);
         }
         if (Input.GetKeyDown(_hardAttack))
         {
             _smallFist.SetActive(true);
-            _smallFist.GetComponent<BoxCollider2D>().enabled = false;
+            _smallFist.GetComponent<BoxCollider>().enabled = false;
             _mediumFist.SetActive(true);
-            _mediumFist.GetComponent<BoxCollider2D>().enabled = false;
+            _mediumFist.GetComponent<BoxCollider>().enabled = false;
             _bigFist.SetActive(true);
+            AnimationManager.Instance.HardPunch();
         }
         if (Input.GetKeyUp(_hardAttack))
         {
             _smallFist.SetActive(false);
-            _smallFist.GetComponent<BoxCollider2D>().enabled = true;
+            _smallFist.GetComponent<BoxCollider>().enabled = true;
             _mediumFist.SetActive(false);
-            _mediumFist.GetComponent<BoxCollider2D>().enabled = true;
+            _mediumFist.GetComponent<BoxCollider>().enabled = true;
             _bigFist.SetActive(false);
         }
         if (Input.GetKeyDown(_blockMove))
         {
             _blockFist.SetActive(true);
-            _Playercol.GetComponent<BoxCollider2D>().enabled = false;
+            _Playercol.GetComponent<BoxCollider>().enabled = false;
         }
         if (Input.GetKeyUp(_blockMove))
         {
             _blockFist.SetActive(false);
-            _Playercol.GetComponent<BoxCollider2D>().enabled = true;
+            _Playercol.GetComponent<BoxCollider>().enabled = true;
         }
     }
 }

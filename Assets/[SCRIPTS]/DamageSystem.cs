@@ -31,7 +31,7 @@ public class DamageSystem : MonoBehaviour
         _healthSlider.value = _life;
     }
 
-    private void OnTriggerEnter2D(Collider2D col)
+    private void OnTriggerEnter(Collider col)
     {
         switch (col.gameObject.tag)
         {
@@ -55,7 +55,7 @@ public class DamageSystem : MonoBehaviour
         }
         UpdateSlider();
     }
-
+    
     public void WinnerUIChange()
     {
         GameManager.Instance.PlayerWin(_winnerName, _playerNumber, _PlayerWinner);
