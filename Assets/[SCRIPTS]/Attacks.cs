@@ -14,13 +14,18 @@ public class Attacks : MonoBehaviour
      [SerializeField] private GameObject _blockFist = default;
      [SerializeField] private GameObject _Playercol = default;
      [SerializeField] private KeyCode _blockMove = default;
+     [SerializeField] private Animator anim = default;
 
-     void Update()
+    private void Awake()
+    {
+        anim = GetComponent<Animator>();
+    }
+    void Update()
     {
         if (Input.GetKeyDown(_lightAttack))
         {
             _smallFist.SetActive(true);
-            AnimationController.Instance.LightPunch();
+            AnimationController.Instance.LightPunch(anim);
         }
         if (Input.GetKeyUp(_lightAttack))
         {
@@ -29,7 +34,7 @@ public class Attacks : MonoBehaviour
         if (Input.GetKeyDown(_ComboAttack) && (Input.GetKeyDown(_CombondKey)))
         {
             _ComboFist.SetActive(true);
-            AnimationController.Instance.ComboPunch();
+            AnimationController.Instance.ComboPunch(anim);
         }
         if (Input.GetKeyUp(_ComboAttack))
         {
@@ -40,7 +45,8 @@ public class Attacks : MonoBehaviour
             _smallFist.SetActive(true);
             _smallFist.GetComponent<BoxCollider>().enabled = false;
             _mediumFist.SetActive(true);
-            AnimationController.Instance.MediumPuch();
+            AnimationController.Instance.MediumPuch(anim);
+            AnimationController.Instance.MediumPuch(anim);
         }
         if (Input.GetKeyUp(_mediumAttack))
         {
@@ -55,7 +61,7 @@ public class Attacks : MonoBehaviour
             _mediumFist.SetActive(true);
             _mediumFist.GetComponent<BoxCollider>().enabled = false;
             _bigFist.SetActive(true);
-            AnimationController.Instance.HardPunch();
+            AnimationController.Instance.HardPunch(anim);
         }
         if (Input.GetKeyUp(_hardAttack))
         {
@@ -68,7 +74,7 @@ public class Attacks : MonoBehaviour
         if (Input.GetKeyDown(_blockMove))
         {
             _blockFist.SetActive(true);
-            AnimationController.Instance.Block();
+            AnimationController.Instance.Block(anim);
         }
         if (Input.GetKeyUp(_blockMove))
         {

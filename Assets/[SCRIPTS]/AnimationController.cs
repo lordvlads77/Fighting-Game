@@ -6,7 +6,6 @@ using UnityEngine;
 public class AnimationController : MonoBehaviour
 {
     public static AnimationController Instance { get; private set; }
-    [SerializeField] private Animator _anim = default;
     private readonly int _ahLpunch = Animator.StringToHash("lightPunch");
     private readonly int _ahMpunch = Animator.StringToHash("mediumPunch");
     private readonly int _ahHpunch = Animator.StringToHash("hardPunch");
@@ -26,28 +25,28 @@ public class AnimationController : MonoBehaviour
         }
     }
 
-    public void LightPunch()
+    public void LightPunch(Animator animm)
     {
-        _anim.SetTrigger(_ahLpunch);    
+        animm.SetTrigger(_ahLpunch);
     }
 
-    public void MediumPuch()
+    public void MediumPuch(Animator animm)
     {
-        _anim.SetTrigger(_ahMpunch);
+        animm.SetTrigger(_ahMpunch);
     }
 
-    public void HardPunch()
+    public void HardPunch(Animator animm)
     {
-        _anim.SetTrigger(_ahHpunch);
+        animm.SetTrigger(_ahHpunch);
     }
 
-    public void ComboPunch()
+    public void ComboPunch(Animator animm)
     {
-        _anim.SetTrigger(_ahCombopunch);
+        animm.SetTrigger(_ahCombopunch);
     }
 
-    public void Block()
+    public void Block(Animator animm)
     {
-        _anim.SetTrigger(_ahBlock);
+        animm.SetTrigger(_ahBlock);
     }
 }

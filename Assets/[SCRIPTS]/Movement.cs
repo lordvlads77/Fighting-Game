@@ -66,9 +66,4 @@ public class Movement : MonoBehaviour
         _screenPause.SetActive(true);
         Time.timeScale = 0;
     }
-
-    public void FlipMove(int direction)
-    {
-        transform.Translate(0, 0, direction * _speed * Time.deltaTime);
-    }
 }
