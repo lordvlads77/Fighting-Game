@@ -14,12 +14,18 @@ public class Attacks : MonoBehaviour
      [SerializeField] private GameObject _blockFist = default;
      [SerializeField] private GameObject _Playercol = default;
      [SerializeField] private KeyCode _blockMove = default;
+     [SerializeField] private Animator anim = default;
 
-     void Update()
+    private void Awake()
+    {
+        anim = GetComponent<Animator>();
+    }
+    void Update()
     {
         if (Input.GetKeyDown(_lightAttack))
         {
             _smallFist.SetActive(true);
+            AnimationController.Instance.LightPunch(anim);
         }
         if (Input.GetKeyUp(_lightAttack))
         {
@@ -28,6 +34,7 @@ public class Attacks : MonoBehaviour
         if (Input.GetKeyDown(_ComboAttack) && (Input.GetKeyDown(_CombondKey)))
         {
             _ComboFist.SetActive(true);
+            AnimationController.Instance.ComboPunch(anim);
         }
         if (Input.GetKeyUp(_ComboAttack))
         {
@@ -36,40 +43,42 @@ public class Attacks : MonoBehaviour
         if (Input.GetKeyDown(_mediumAttack))
         {
             _smallFist.SetActive(true);
-            _smallFist.GetComponent<BoxCollider2D>().enabled = false;
+            _smallFist.GetComponent<BoxCollider>().enabled = false;
             _mediumFist.SetActive(true);
+            AnimationController.Instance.MediumPuch(anim);
+            AnimationController.Instance.MediumPuch(anim);
         }
         if (Input.GetKeyUp(_mediumAttack))
         {
             _smallFist.SetActive(false);
-            _smallFist.GetComponent<BoxCollider2D>().enabled = true;
+            _smallFist.GetComponent<BoxCollider>().enabled = true;
             _mediumFist.SetActive(false);
         }
         if (Input.GetKeyDown(_hardAttack))
         {
             _smallFist.SetActive(true);
-            _smallFist.GetComponent<BoxCollider2D>().enabled = false;
+            _smallFist.GetComponent<BoxCollider>().enabled = false;
             _mediumFist.SetActive(true);
-            _mediumFist.GetComponent<BoxCollider2D>().enabled = false;
+            _mediumFist.GetComponent<BoxCollider>().enabled = false;
             _bigFist.SetActive(true);
+            AnimationController.Instance.HardPunch(anim);
         }
         if (Input.GetKeyUp(_hardAttack))
         {
             _smallFist.SetActive(false);
-            _smallFist.GetComponent<BoxCollider2D>().enabled = true;
+            _smallFist.GetComponent<BoxCollider>().enabled = true;
             _mediumFist.SetActive(false);
-            _mediumFist.GetComponent<BoxCollider2D>().enabled = true;
+            _mediumFist.GetComponent<BoxCollider>().enabled = true;
             _bigFist.SetActive(false);
         }
         if (Input.GetKeyDown(_blockMove))
         {
             _blockFist.SetActive(true);
-            _Playercol.GetComponent<BoxCollider2D>().enabled = false;
+            AnimationController.Instance.Block(anim);
         }
         if (Input.GetKeyUp(_blockMove))
         {
             _blockFist.SetActive(false);
-            _Playercol.GetComponent<BoxCollider2D>().enabled = true;
         }
     }
 }

@@ -9,6 +9,7 @@ TagManager:
   - mediumFist
   - bigFist
   - ComboFist
+  - block
   layers:
   - Default
   - TransparentFX
