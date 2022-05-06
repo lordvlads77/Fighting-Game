@@ -14,7 +14,7 @@ public class Attacks : MonoBehaviour
      [SerializeField] private GameObject _blockFist = default;
      [SerializeField] private GameObject _Playercol = default;
      [SerializeField] private KeyCode _blockMove = default;
-     [SerializeField] private Animator anim = default;
+     private Animator anim = default;
 
     private void Awake()
     {
@@ -31,7 +31,7 @@ public class Attacks : MonoBehaviour
         {
             _smallFist.SetActive(false);
         }
-        if (Input.GetKeyDown(_ComboAttack) && (Input.GetKeyDown(_CombondKey)))
+        if (Input.GetKeyDown(_ComboAttack))
         {
             _ComboFist.SetActive(true);
             AnimationController.Instance.ComboPunch(anim);
