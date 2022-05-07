@@ -3,12 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="3a17a00c-3af9-4c60-ad81-2e00aff315f6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project-Pegasus/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project-Pegasus/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/[ANIMATIONS]/PlayerPunch.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[ANIMATIONS]/PlayerPunch.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/[ANIMATIONS]/SideKick.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[ANIMATIONS]/SideKick.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/[SCRIPTS]/Attacks.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[SCRIPTS]/Attacks.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/[SCRIPTS]/DamageSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[SCRIPTS]/DamageSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/[SCRIPTS]/Movement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[SCRIPTS]/Movement.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,6 +85,8 @@
       <workItem from="1651368098824" duration="1992000" />
       <workItem from="1651511495158" duration="2673000" />
       <workItem from="1651523936571" duration="13415000" />
+      <workItem from="1651877154100" duration="3319000" />
+      <workItem from="1651949395986" duration="4263000" />
     </task>
     <servers />
   </component>
@@ -113,5 +109,24 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/[SCRIPTS]/DamageSystem.cs</url>
+          <line>55</line>
+          <properties documentPath="C:\Users\lipsh\OneDrive - amerike.edu.mx\Documentos\GitHub\Project-Pegasus\Assets\[SCRIPTS]\DamageSystem.cs" initialLine="59" containingFunctionPresentation="method 'OnTriggerEnter'">
+            <startOffsets>
+              <option value="1398" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1413" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -12,7 +12,7 @@ public class DamageSystem : MonoBehaviour
     [Header("Dynamic Win Sys")]
     [SerializeField] private TextMeshProUGUI _winnerName = default;
     [SerializeField] private int _PlayerWinner = default;
-    
+
     public void MinusLife(int amount)
     {
         for (int i = 0; i < amount; i++)
