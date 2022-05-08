@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -12,6 +13,18 @@ public class DamageSystem : MonoBehaviour
     [Header("Dynamic Win Sys")]
     [SerializeField] private TextMeshProUGUI _winnerName = default;
     [SerializeField] private int _PlayerWinner = default;
+    
+    [Header("Sound System")]
+    [SerializeField] private AudioSource _punchesSFX = default;
+    [SerializeField] private AudioClip _lightHittSFX = default;
+    [SerializeField] private AudioClip _medHitSfx = default;
+    [SerializeField] private AudioClip _hardHittSfx = default;
+    [SerializeField] private AudioClip _kickSfx = default; 
+
+    private void Start()
+    {
+        _punchesSFX = GetComponent<AudioSource>();
+    }
 
     public void MinusLife(int amount)
     {
@@ -37,18 +50,22 @@ public class DamageSystem : MonoBehaviour
         {
             case "smallFist":
                 MinusLife(1);
+                _punchesSFX.PlayOneShot(_lightHittSFX, 1f);
                 break;
             case "mediumFist":
                 MinusLife(2);
+                _punchesSFX.PlayOneShot(_medHitSfx, 1f);
                 break;
             case "bigFist":
                 MinusLife(3);
+                _punchesSFX.PlayOneShot(_hardHittSfx, 1f);
                 break;
             case "block":
                 MinusLife(0);
                 break;
             case "ComboFist":
                 MinusLife(5);
+                _punchesSFX.PlayOneShot(_kickSfx, 1f);
                 break;
             default:
                 break;
