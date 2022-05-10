@@ -11,6 +11,8 @@ public class GUI : MonoBehaviour
     [SerializeField] private GameObject _keybindsScreen = default;
     [SerializeField] private GameObject _player1KeysPanel = default;
     [SerializeField] private GameObject _player2KeysPanel = default;
+    [SerializeField] private AudioSource _lobbyMusic = default;
+    [SerializeField] private AudioSource _battleMusic = default;
 
     void Start()
     {
@@ -22,6 +24,8 @@ public class GUI : MonoBehaviour
         _playScreen.SetActive(false);
         _movement._screenPause.SetActive(false);
         Time.timeScale = 1;
+        _lobbyMusic.enabled = false;
+        _battleMusic.enabled = true;
     }
 
     public void ButtonAgain()
