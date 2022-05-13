@@ -10,11 +10,12 @@ TagManager:
   - bigFist
   - ComboFist
   - block
+  - FxTemporaire
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
   - 
