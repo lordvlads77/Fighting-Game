@@ -4,7 +4,6 @@ public class Movement : MonoBehaviour
 {
     [SerializeField] private float _speed = default;
     [SerializeField] private int _jumpSpeed = default;
-    [SerializeField] public GameObject _screenPause = default;
     [SerializeField] private KeyCode _horizontalL = default;
     [SerializeField] private KeyCode _horizontalR = default;
     [SerializeField] private KeyCode _jumpL = default;
@@ -43,7 +42,7 @@ public class Movement : MonoBehaviour
         }
         if (Input.GetKeyDown(_pause))
         {
-            Pause();
+            GUI.Instance.Pause();
         }
         if (Input.GetKeyUp(_horizontalR))
         {
@@ -59,11 +58,5 @@ public class Movement : MonoBehaviour
     public void Jump()
     {   
         transform.Translate(0, _jumpSpeed * _speed * Time.deltaTime, 0);
-    }
-
-    public void Pause()
-    {
-        _screenPause.SetActive(true);
-        Time.timeScale = 0;
     }
 }
