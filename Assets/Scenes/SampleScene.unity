@@ -8644,6 +8644,22 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6834559866030254224, guid: 146307db11e646f4e9b9ed16f2241fa6, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.2614703
+      objectReference: {fileID: 0}
+    - target: {fileID: 6834559866030254224, guid: 146307db11e646f4e9b9ed16f2241fa6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.823
+      objectReference: {fileID: 0}
+    - target: {fileID: 6834559866030254228, guid: 146307db11e646f4e9b9ed16f2241fa6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6834559866030254230, guid: 146307db11e646f4e9b9ed16f2241fa6, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6834559866085778516, guid: 146307db11e646f4e9b9ed16f2241fa6, type: 3}
       propertyPath: m_Constraints
       value: 122
@@ -8752,6 +8768,10 @@ PrefabInstance:
       propertyPath: _lightHittSFX
       value: 
       objectReference: {fileID: 8300000, guid: 6285698432a82ae428968184f6b6a94c, type: 3}
+    - target: {fileID: 6834559866566255982, guid: 146307db11e646f4e9b9ed16f2241fa6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6834559866912797247, guid: 146307db11e646f4e9b9ed16f2241fa6, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -8807,6 +8827,10 @@ PrefabInstance:
     - target: {fileID: 6834559866916169523, guid: 146307db11e646f4e9b9ed16f2241fa6, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6834559867041368804, guid: 146307db11e646f4e9b9ed16f2241fa6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 146307db11e646f4e9b9ed16f2241fa6, type: 3}

@@ -82,10 +82,6 @@ public class Attacks : MonoBehaviour
         }
         if (Input.GetKeyDown(_hardAttack))
         {
-            _smallFist.SetActive(true);
-            _smallFist.GetComponent<BoxCollider>().enabled = true;
-            _mediumFist.SetActive(true);
-            _mediumFist.GetComponent<BoxCollider>().enabled = true;
             _bigFist.SetActive(true);
             AnimationController.Instance.HardPunch(anim);
             GameObject hardHit = Instantiate(_hitEffectHP, _leftHandsie.transform.position,
@@ -94,10 +90,6 @@ public class Attacks : MonoBehaviour
         }
         if (Input.GetKeyUp(_hardAttack))
         {
-            _smallFist.SetActive(false);
-            //_smallFist.GetComponent<BoxCollider>().enabled = true;
-            _mediumFist.SetActive(false);
-            //_mediumFist.GetComponent<BoxCollider>().enabled = true;
             _bigFist.SetActive(false);
         }
         if (Input.GetKeyDown(_blockMove))
