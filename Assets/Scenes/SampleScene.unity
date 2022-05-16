@@ -8646,11 +8646,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6834559866030254224, guid: 146307db11e646f4e9b9ed16f2241fa6, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.2614703
+      value: 0.81471854
       objectReference: {fileID: 0}
     - target: {fileID: 6834559866030254224, guid: 146307db11e646f4e9b9ed16f2241fa6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.823
+      value: 0.579
       objectReference: {fileID: 0}
     - target: {fileID: 6834559866030254228, guid: 146307db11e646f4e9b9ed16f2241fa6, type: 3}
       propertyPath: m_IsActive
