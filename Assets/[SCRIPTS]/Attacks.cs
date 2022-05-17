@@ -15,20 +15,6 @@ public class Attacks : MonoBehaviour
      [SerializeField] private GameObject _Playercol = default;
      [SerializeField] private KeyCode _blockMove = default;
      private Animator anim = default;
-     [Header("Light Punch Particles")]
-     [SerializeField] private GameObject _hitEffectLightPunch = default;
-     [SerializeField] private Transform _leftHandsie = default;
-     [Header("Medium Punch Particles")]
-     [SerializeField] private GameObject _hitEffetMP = default;
-     [SerializeField] private Transform _RightHandise = default;
-     [Header("Hard Punch Particles")]
-     [SerializeField] private GameObject _hitEffectHP = default;
-     [Header("Block Particles")]
-     [SerializeField] private GameObject _EffectBlock = default;
-     [SerializeField] private Transform _headsie = default;
-     [Header("Combo Particles")]
-     [SerializeField] private GameObject _EffectCombo = default;
-     [SerializeField] private Transform _legsie = default;
      [Header("Sounds Sys")]
      [SerializeField] private AudioSource _battleCriesSFX = default;
      [SerializeField] private AudioClip _battleCryLM = default;
@@ -45,7 +31,6 @@ public class Attacks : MonoBehaviour
         {
             _smallFist.SetActive(true);
             AnimationController.Instance.LightPunch(anim);
-            GameObject lighthit = Instantiate(_hitEffectLightPunch, _leftHandsie.transform.position, _leftHandsie.transform.rotation);
             _battleCriesSFX.PlayOneShot(_battleCryLM, 1f);
         }
         if (Input.GetKeyUp(_lightAttack))
@@ -56,7 +41,6 @@ public class Attacks : MonoBehaviour
         {
             _ComboFist.SetActive(true);
             AnimationController.Instance.ComboPunch(anim);
-            GameObject vfxcombo = Instantiate(_EffectCombo, _legsie.transform.position, _legsie.transform.rotation);
             _battleCriesSFX.PlayOneShot(_battleCryK, 1f);
         }
         if (Input.GetKeyUp(_ComboAttack))
@@ -69,8 +53,6 @@ public class Attacks : MonoBehaviour
             _smallFist.GetComponent<BoxCollider>().enabled = false;
             _mediumFist.SetActive(true);
             AnimationController.Instance.MediumPuch(anim);
-            GameObject mediumHit = Instantiate(_hitEffetMP, _RightHandise.transform.position,
-                _RightHandise.transform.rotation);
             _battleCriesSFX.PlayOneShot(_battleCryLM, 1f);
 
         }
@@ -88,8 +70,6 @@ public class Attacks : MonoBehaviour
             _mediumFist.GetComponent<BoxCollider>().enabled = false;
             _bigFist.SetActive(true);
             AnimationController.Instance.HardPunch(anim);
-            GameObject hardHit = Instantiate(_hitEffectHP, _leftHandsie.transform.position,
-                _leftHandsie.transform.rotation);
             _battleCriesSFX.PlayOneShot(_battleCryH, 1f);
         }
         if (Input.GetKeyUp(_hardAttack))
@@ -104,7 +84,6 @@ public class Attacks : MonoBehaviour
         {
             _blockFist.SetActive(true);
             AnimationController.Instance.Block(anim);
-            GameObject block = Instantiate(_EffectBlock, _headsie.transform.position, _headsie.transform.rotation);
         }
         if (Input.GetKeyUp(_blockMove))
         {

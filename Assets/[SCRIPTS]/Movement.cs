@@ -1,4 +1,6 @@
+using System;
 using UnityEngine;
+using KnightBrawlers;
 
 public class Movement : MonoBehaviour
 {
@@ -15,6 +17,23 @@ public class Movement : MonoBehaviour
     [SerializeField] private Animator _animator = default;
     private readonly int _ahSpeed = Animator.StringToHash("speed");
     private readonly int _ahJump = Animator.StringToHash("jump");
+    
+    [Header("Check Ground")]
+    [SerializeField] private Vector3 _checkGroundP;
+    [SerializeField] private bool _isGroud;
+    [SerializeField] private float _checkGroundR;
+    [SerializeField] private LayerMask _checkGroundM;
+    
+    [Header("Jump Stuff")]
+    private Vector3 _movement;
+    [SerializeField] private Rigidbody _rigidbody;
+    private void FixedUpdate()
+    {
+        _isGroud = Physics.CheckSphere(transform.position + _checkGroundP, _checkGroundR, _checkGroundM);
+        _movement = transform.TransformDirection(_movement);
+        _movement.y = _rigidbody.velocity.y;
+        _rigidbody.velocity = _movement;
+    }
 
     void Update()
     {
@@ -36,7 +55,7 @@ public class Movement : MonoBehaviour
             Move(1);
             _animator.SetInteger(_ahSpeed, 4);
         }
-        if (Input.GetKeyDown(_jumpL))
+        if (Input.GetKey(_jumpL) && _isGroud)
         {
             Jump();
             _animator.SetTrigger(_ahJump);
@@ -58,12 +77,18 @@ public class Movement : MonoBehaviour
     
     public void Jump()
     {   
-        transform.Translate(0, _jumpSpeed * _speed * Time.deltaTime, 0);
+        //transform.Translate(0, _jumpSpeed * Time.deltaTime, 0);
+        _rigidbody.AddForce(Vector3.up * _jumpSpeed);
     }
 
     public void Pause()
     {
         _screenPause.SetActive(true);
         Time.timeScale = 0;
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
     }
 }
