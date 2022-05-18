@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3a17a00c-3af9-4c60-ad81-2e00aff315f6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Project-Pegasus/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project-Pegasus/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/[SCRIPTS]/Attacks.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[SCRIPTS]/Attacks.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/[SCRIPTS]/DamageSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[SCRIPTS]/DamageSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Project-Pegasus/.idea/indexLayout.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/[SCRIPTS]/GUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[SCRIPTS]/GUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/[SCRIPTS]/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[SCRIPTS]/GameManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,19 +27,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="Discover.Launch.Via.Unity" value="true" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="rider.run.widget.enabled.cache" value="false" />
-    <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Discover.Launch.Via.Unity": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "rider.run.widget.enabled.cache": "false",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="E:/Project Codename Pegasus\Fighting Game.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="E:\Project Codename Pegasus" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="UnitTests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="D:\Unity 2020.3.21f1\Editor\Unity.exe" />
+      <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath &quot;C:\Users\lipsh\OneDrive - amerike.edu.mx\Documentos\GitHub\Project-Pegasus&quot; -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\lipsh\OneDrive - amerike.edu.mx\Documentos\GitHub\Project-Pegasus" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <method v="2" />
@@ -93,6 +98,10 @@
       <workItem from="1651949395986" duration="4263000" />
       <workItem from="1651966666506" duration="799000" />
       <workItem from="1651968064893" duration="8891000" />
+      <workItem from="1652494284652" duration="756000" />
+      <workItem from="1652499345573" duration="243000" />
+      <workItem from="1652499866104" duration="4039000" />
+      <workItem from="1652850845845" duration="154000" />
     </task>
     <servers />
   </component>
@@ -115,5 +124,28 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/[SCRIPTS]/Movement.cs</url>
+          <line>60</line>
+          <properties documentPath="C:\Users\lipsh\OneDrive - amerike.edu.mx\Documentos\GitHub\Project-Pegasus\Assets\[SCRIPTS]\Movement.cs" initialLine="63" containingFunctionPresentation="method 'Jump'">
+            <startOffsets>
+              <option value="1754" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1755" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
