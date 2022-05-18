@@ -23,8 +23,8 @@ public class GameManager : MonoBehaviour
         Debug.Log($"Player Death: {playerNumber}");
         _EndScreen.SetActive(true);
         Time.timeScale = 0;
-        GUI.Instance._battleMusic.enabled = false;
-        GUI.Instance._lobbyMusic.enabled = true;
+        _noMoreBattleMusic.enabled = false;
+        _lobbyMusicAgain.enabled = true;
     }
 
     public void PlayerWin(TextMeshProUGUI _winnerName, int playerNumber, int _playerWinner)
