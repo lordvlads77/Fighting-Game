@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class GUI : MonoBehaviour
 {
+    public static GUI Instance { get; private set; }
     [Header("Menu Panels")]
     [SerializeField] private GameObject _playScreen = default;
     [SerializeField] private GameObject _settingsScreen = default;
@@ -15,7 +16,7 @@ public class GUI : MonoBehaviour
     [SerializeField] private GameObject _screenPause = default;
     [SerializeField] private AudioSource _hoverSFX = default;
     
-    public static GUI Instance { get; private set; }
+    
 
     private void Awake()
     {
