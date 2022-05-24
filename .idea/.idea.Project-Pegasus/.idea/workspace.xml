@@ -3,10 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="3a17a00c-3af9-4c60-ad81-2e00aff315f6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project-Pegasus/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project-Pegasus/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/[SCRIPTS]/Attacks.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[SCRIPTS]/Attacks.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/[SCRIPTS]/DamageSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[SCRIPTS]/DamageSystem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/[SCRIPTS]/GUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[SCRIPTS]/GUI.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/[SCRIPTS]/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[SCRIPTS]/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[SCRIPTS]/Movement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[SCRIPTS]/Movement.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,19 +29,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="Discover.Launch.Via.Unity" value="true" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="rider.run.widget.enabled.cache" value="false" />
-    <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Discover.Launch.Via.Unity&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;rider.run.widget.enabled.cache&quot;: &quot;false&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="E:/Project Codename Pegasus\Fighting Game.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="E:\Project Codename Pegasus" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="UnitTests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="D:\Unity 2020.3.21f1\Editor\Unity.exe" />
+      <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath &quot;C:\Users\lipsh\OneDrive - amerike.edu.mx\Documentos\GitHub\Project-Pegasus&quot; -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\lipsh\OneDrive - amerike.edu.mx\Documentos\GitHub\Project-Pegasus" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <method v="2" />
@@ -93,6 +100,8 @@
       <workItem from="1651949395986" duration="4263000" />
       <workItem from="1651966666506" duration="799000" />
       <workItem from="1651968064893" duration="8891000" />
+      <workItem from="1653357119835" duration="245000" />
+      <workItem from="1653357558871" duration="5436000" />
     </task>
     <servers />
   </component>
