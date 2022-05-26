@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3a17a00c-3af9-4c60-ad81-2e00aff315f6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project-Pegasus/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project-Pegasus/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/[SCRIPTS]/Movement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[SCRIPTS]/Movement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,12 +33,15 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Discover.Launch.Via.Unity": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "rider.run.widget.enabled.cache": "false",
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Language Defaults",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -106,6 +109,7 @@
       <workItem from="1651966666506" duration="799000" />
       <workItem from="1651968064893" duration="8891000" />
       <workItem from="1653624751120" duration="2516000" />
+      <workItem from="1653606347229" duration="939000" />
     </task>
     <servers />
   </component>
