@@ -45,7 +45,7 @@ public class Attacks : MonoBehaviour
         {
             _smallFist.SetActive(true);
             AnimationController.Instance.LightPunch(anim);
-            GameObject lighthit = Instantiate(_hitEffectLightPunch, _leftHandsie.transform.position, _leftHandsie.transform.rotation);
+            GameObject lighthit = Instantiate(_hitEffectLightPunch, _leftHandsie.position, _leftHandsie.rotation);
             _battleCriesSFX.PlayOneShot(_battleCryLM, 1f);
         }
         if (Input.GetKeyUp(_lightAttack))
@@ -69,8 +69,8 @@ public class Attacks : MonoBehaviour
             _smallFist.GetComponent<BoxCollider>().enabled = false;
             _mediumFist.SetActive(true);
             AnimationController.Instance.MediumPuch(anim);
-            GameObject mediumHit = Instantiate(_hitEffetMP, _RightHandise.transform.position,
-                _RightHandise.transform.rotation);
+            GameObject mediumHit = Instantiate(_hitEffetMP, _RightHandise.position,
+                _RightHandise.rotation);
             _battleCriesSFX.PlayOneShot(_battleCryLM, 1f);
 
         }
@@ -82,22 +82,14 @@ public class Attacks : MonoBehaviour
         }
         if (Input.GetKeyDown(_hardAttack))
         {
-            _smallFist.SetActive(true);
-            _smallFist.GetComponent<BoxCollider>().enabled = false;
-            _mediumFist.SetActive(true);
-            _mediumFist.GetComponent<BoxCollider>().enabled = false;
             _bigFist.SetActive(true);
             AnimationController.Instance.HardPunch(anim);
-            GameObject hardHit = Instantiate(_hitEffectHP, _leftHandsie.transform.position,
-                _leftHandsie.transform.rotation);
+            GameObject hardHit = Instantiate(_hitEffectHP, _leftHandsie.position,
+                _leftHandsie.rotation);
             _battleCriesSFX.PlayOneShot(_battleCryH, 1f);
         }
         if (Input.GetKeyUp(_hardAttack))
         {
-            _smallFist.SetActive(false);
-            _smallFist.GetComponent<BoxCollider>().enabled = true;
-            _mediumFist.SetActive(false);
-            _mediumFist.GetComponent<BoxCollider>().enabled = true;
             _bigFist.SetActive(false);
         }
         if (Input.GetKeyDown(_blockMove))
