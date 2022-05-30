@@ -29,13 +29,10 @@ public class Attacks : MonoBehaviour
      [Header("Combo Particles")]
      [SerializeField] private GameObject _EffectCombo = default;
      [SerializeField] private Transform _legsie = default;
-     [Header("Sounds Sys")]
-     [SerializeField] private AudioSource _battleCriesSFX = default;
-     [SerializeField] private AudioClip _battleCryLM = default;
-     [SerializeField] private AudioClip _battleCryH = default;
-     [SerializeField] private AudioClip _battleCryK = default;
 
-    private void Awake()
+
+
+     private void Awake()
     {
         anim = GetComponent<Animator>();
     }
@@ -46,7 +43,7 @@ public class Attacks : MonoBehaviour
             _smallFist.SetActive(true);
             AnimationController.Instance.LightPunch(anim);
             GameObject lighthit = Instantiate(_hitEffectLightPunch, _leftHandsie.position, _leftHandsie.rotation);
-            _battleCriesSFX.PlayOneShot(_battleCryLM, 1f);
+            SoundController.Instance.BattleCryLightMedium();
         }
         if (Input.GetKeyUp(_lightAttack))
         {
@@ -57,7 +54,7 @@ public class Attacks : MonoBehaviour
             _ComboFist.SetActive(true);
             AnimationController.Instance.ComboPunch(anim);
             GameObject vfxcombo = Instantiate(_EffectCombo, _legsie.transform.position, _legsie.transform.rotation);
-            _battleCriesSFX.PlayOneShot(_battleCryK, 1f);
+            SoundController.Instance.ComboBattleCry();
         }
         if (Input.GetKeyUp(_ComboAttack))
         {
@@ -71,7 +68,7 @@ public class Attacks : MonoBehaviour
             AnimationController.Instance.MediumPuch(anim);
             GameObject mediumHit = Instantiate(_hitEffetMP, _RightHandise.position,
                 _RightHandise.rotation);
-            _battleCriesSFX.PlayOneShot(_battleCryLM, 1f);
+            SoundController.Instance.BattleCryLightMedium();
 
         }
         if (Input.GetKeyUp(_mediumAttack))
@@ -86,7 +83,7 @@ public class Attacks : MonoBehaviour
             AnimationController.Instance.HardPunch(anim);
             GameObject hardHit = Instantiate(_hitEffectHP, _leftHandsie.position,
                 _leftHandsie.rotation);
-            _battleCriesSFX.PlayOneShot(_battleCryH, 1f);
+            SoundController.Instance.HardPunchBattleCry();
         }
         if (Input.GetKeyUp(_hardAttack))
         {
