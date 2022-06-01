@@ -14,18 +14,6 @@ public class DamageSystem : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _winnerName = default;
     [SerializeField] private int _PlayerWinner = default;
     
-    [Header("Sound System")]
-    [SerializeField] private AudioSource _punchesSFX = default;
-    [SerializeField] private AudioClip _lightHittSFX = default;
-    [SerializeField] private AudioClip _medHitSfx = default;
-    [SerializeField] private AudioClip _hardHittSfx = default;
-    [SerializeField] private AudioClip _kickSfx = default; 
-
-    private void Start()
-    {
-        _punchesSFX = GetComponent<AudioSource>();
-    }
-
     public void MinusLife(int amount)
     {
         for (int i = 0; i < amount; i++)
@@ -50,22 +38,22 @@ public class DamageSystem : MonoBehaviour
         {
             case "smallFist":
                 MinusLife(1);
-                _punchesSFX.PlayOneShot(_lightHittSFX, 1f);
+                SoundController.Instance.LightHitSFX();
                 break;
             case "mediumFist":
                 MinusLife(2);
-                _punchesSFX.PlayOneShot(_medHitSfx, 1f);
+                SoundController.Instance.MediumHitSFX();
                 break;
             case "bigFist":
                 MinusLife(3);
-                _punchesSFX.PlayOneShot(_hardHittSfx, 1f);
+                SoundController.Instance.HardHitSFX();
                 break;
             case "block":
                 MinusLife(0);
                 break;
             case "ComboFist":
                 MinusLife(5);
-                _punchesSFX.PlayOneShot(_kickSfx, 1f);
+                SoundController.Instance.KickMoveSFX();
                 break;
             default:
                 break;
