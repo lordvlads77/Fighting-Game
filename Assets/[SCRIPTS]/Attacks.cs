@@ -72,6 +72,7 @@ public class Attacks : MonoBehaviour
         {
             _blockFist.SetActive(true);
             AnimationController.Instance.Block(anim);
+            ParticleController.Instance.blok();
         }
         if (Input.GetKeyUp(_blockMove))
         {

@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3a17a00c-3af9-4c60-ad81-2e00aff315f6" name="Changes" comment="" />
+    <list default="true" id="3a17a00c-3af9-4c60-ad81-2e00aff315f6" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[PARTICLES]/BloodSplash.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[PARTICLES]/BloodSplash.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[PARTICLES]/PropspectsParticles/FireBreath.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[PARTICLES]/PropspectsParticles/FireBreath.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[PARTICLES]/Punches_Attacks/HardPunch.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[PARTICLES]/Punches_Attacks/HardPunch.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[SCRIPTS]/Attacks.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[SCRIPTS]/Attacks.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[SCRIPTS]/DamageSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[SCRIPTS]/DamageSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -113,6 +121,7 @@
       <workItem from="1653332135879" duration="365000" />
       <workItem from="1654109850099" duration="655000" />
       <workItem from="1654124202025" duration="4618000" />
+      <workItem from="1654149611020" duration="133000" />
     </task>
     <servers />
   </component>

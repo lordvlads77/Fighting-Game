@@ -56,7 +56,6 @@ public class DamageSystem : MonoBehaviour
                 break;
             case "block":
                 MinusLife(0);
-                ParticleController.Instance.blok();
                 break;
             case "ComboFist":
                 MinusLife(5);
