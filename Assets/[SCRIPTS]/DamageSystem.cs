@@ -39,21 +39,29 @@ public class DamageSystem : MonoBehaviour
             case "smallFist":
                 MinusLife(1);
                 SoundController.Instance.LightHitSFX();
+                ParticleController.Instance.spawnLightoPunch();
+                ParticleController.Instance.BodBlood();
                 break;
             case "mediumFist":
                 MinusLife(2);
                 SoundController.Instance.MediumHitSFX();
+                ParticleController.Instance.spawnMediumPunch();
+                ParticleController.Instance.BodBlood();
                 break;
             case "bigFist":
                 MinusLife(3);
                 SoundController.Instance.HardHitSFX();
+                ParticleController.Instance.spawnHardPunch();
+                ParticleController.Instance.bloodshedHead();
                 break;
             case "block":
                 MinusLife(0);
+                ParticleController.Instance.blok();
                 break;
             case "ComboFist":
                 MinusLife(5);
                 SoundController.Instance.KickMoveSFX();
+                ParticleController.Instance.spawnCwKick();
                 break;
             default:
                 break;

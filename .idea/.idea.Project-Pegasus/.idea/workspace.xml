@@ -5,7 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3a17a00c-3af9-4c60-ad81-2e00aff315f6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/[PARTICLES]/Shaders/BloodSplash.shadergraph" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[PARTICLES]/Shaders/BloodSplash.shadergraph" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Project-Pegasus/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project-Pegasus/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[PREFABS/player1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[PREFABS/player1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[SCRIPTS]/Attacks.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[SCRIPTS]/Attacks.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[SCRIPTS]/DamageSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[SCRIPTS]/DamageSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[SCRIPTS]/ParticleController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[SCRIPTS]/ParticleController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +26,9 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="25d16OUIwO9Yo66YVFbKZOHFMW9" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -111,6 +118,7 @@
       <workItem from="1653331936716" duration="126000" />
       <workItem from="1653332135879" duration="365000" />
       <workItem from="1654109850099" duration="655000" />
+      <workItem from="1654124202025" duration="4402000" />
     </task>
     <servers />
   </component>
