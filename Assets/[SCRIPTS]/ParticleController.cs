@@ -1,7 +1,5 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class ParticleController : MonoBehaviour
 {
@@ -18,16 +16,36 @@ public class ParticleController : MonoBehaviour
     [Header("Combo Wombo VFX")]
     [SerializeField] private GameObject _comboWomboVFX = default;
     [SerializeField] private Transform _CWPunchies = default;
-    [Header("Block VFX")]
-    [SerializeField] private GameObject _blocksieVFX = default;
-    [SerializeField] private Transform _blckPunchie = default;
+    [Header("Block GameObj")]
+    [SerializeField] private GameObject _blockk = default;
     [Header("Blood Head VFX")]
     [SerializeField] private GameObject _blodSpwanVFX = default;
     [SerializeField] private Transform _bloodsieSpawnear = default;
     [Header("Blood Body VFX")]
     [SerializeField] private GameObject _bloodBodyVFX = default;
     [SerializeField] private Transform _bodyBlood = default;
-
+    
+    [FormerlySerializedAs("_hardPunchie")]
+    [Header("Player 2")]
+    [SerializeField] private Transform _hardPunchie2 = default;
+    [SerializeField] private GameObject _hardPunchieVFX2 = default;
+    [Header("Medium Punch VFX")]
+    [SerializeField] private GameObject _mPunchieVFX2 = default;
+    [SerializeField] private Transform _MedPunchies2 = default;
+    [Header("Light Punch VFX")]
+    [SerializeField] private GameObject _lghtPunchieVFX2 = default;
+    [SerializeField] private Transform _lPunchies2 = default;
+    [Header("Combo Wombo VFX")]
+    [SerializeField] private GameObject _comboWomboVFX2 = default;
+    [SerializeField] private Transform _CWPunchies2 = default;
+    [Header("Block GameObj")]
+    [SerializeField] private GameObject _blockk2 = default;
+    [Header("Blood Head VFX")]
+    [SerializeField] private GameObject _blodSpwanVFX2 = default;
+    [SerializeField] private Transform _bloodsieSpawnear2 = default;
+    [Header("Blood Body VFX")]
+    [SerializeField] private GameObject _bloodBodyVFX2 = default;
+    [SerializeField] private Transform _bodyBlood2 = default;
     private void Awake()
     {
         Instance = this;
@@ -59,9 +77,14 @@ public class ParticleController : MonoBehaviour
 
     public void blok()
     {
-        GameObject blck = Instantiate(_blocksieVFX, _blckPunchie.position, _blckPunchie.rotation);
+        _blockk.SetActive(true);
     }
 
+    public void StopBlocking()
+    {
+        _blockk.SetActive(false);
+    }
+    
     public void bloodshedHead()
     {
         GameObject headBlood = Instantiate(_blodSpwanVFX, _bloodsieSpawnear.position, _bloodsieSpawnear.rotation);
@@ -70,5 +93,44 @@ public class ParticleController : MonoBehaviour
     public void BodBlood()
     {
         GameObject Bloodbod = Instantiate(_bloodBodyVFX, _bodyBlood.position, _bodyBlood.rotation);
+    }
+    public void spawnHardPunch2()
+    {
+        GameObject SpawnerHardHit2 = Instantiate(_hardPunchieVFX2, _hardPunchie2.position, _hardPunchie2.rotation);
+    }
+
+    public void spawnMediumPunch2()
+    {
+        GameObject SpawnerMPunch2 = Instantiate(_mPunchieVFX2, _MedPunchies2.position, _MedPunchies2.rotation);
+    }
+
+    public void spawnLightoPunch2()
+    {
+        GameObject SpawnerLightoPunch2 = Instantiate(_lghtPunchieVFX2, _lPunchies2.position, _lPunchies2.rotation);
+    }
+
+    public void spawnCwKick2()
+    {
+        GameObject KickComboW2 = Instantiate(_comboWomboVFX2, _CWPunchies2.position, _CWPunchies2.rotation);
+    }
+
+    public void blok2()
+    {
+        _blockk2.SetActive(true);
+    }
+
+    public void StopBlocking2()
+    {
+        _blockk2.SetActive(false);
+    }
+    
+    public void bloodshedHead2()
+    {
+        GameObject headBlood2 = Instantiate(_blodSpwanVFX2, _bloodsieSpawnear2.position, _bloodsieSpawnear2.rotation);
+    }
+
+    public void BodBlood2()
+    {
+        GameObject Bloodbod2 = Instantiate(_bloodBodyVFX2, _bodyBlood2.position, _bodyBlood2.rotation);
     }
 }

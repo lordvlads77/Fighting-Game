@@ -14,6 +14,7 @@ public class Attacks : MonoBehaviour
      [SerializeField] private GameObject _blockFist = default;
      [SerializeField] private GameObject _Playercol = default;
      [SerializeField] private KeyCode _blockMove = default;
+     [SerializeField] private GameObject _blockob = default;
      private Animator anim = default;
 
 
@@ -72,11 +73,28 @@ public class Attacks : MonoBehaviour
         {
             _blockFist.SetActive(true);
             AnimationController.Instance.Block(anim);
-            ParticleController.Instance.blok();
+            if (_blockob.CompareTag("block"))
+            {
+                ParticleController.Instance.blok();
+            }
+            else if (_blockob.CompareTag("blocksito2"))
+            {
+                ParticleController.Instance.blok2();   
+            }
+
         }
         if (Input.GetKeyUp(_blockMove))
         {
             _blockFist.SetActive(false);
+            if (_blockob.CompareTag("block"))
+            {
+                ParticleController.Instance.StopBlocking();
+            }
+            else if (_blockob.CompareTag("blocksito2"))
+            {
+                ParticleController.Instance.StopBlocking2();
+            }
         }
+        
     }
 }

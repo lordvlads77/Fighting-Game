@@ -61,6 +61,22 @@ public class DamageSystem : MonoBehaviour
                 MinusLife(5);
                 SoundController.Instance.KickMoveSFX();
                 ParticleController.Instance.spawnCwKick();
+                ParticleController.Instance.bloodshedHead();
+                break;
+            case "smallfist2":
+                ParticleController.Instance.spawnLightoPunch2();
+                break;
+            case "mediumfist2":
+                ParticleController.Instance.spawnMediumPunch2();
+                break;
+            case "bigfist2":
+                ParticleController.Instance.spawnHardPunch2();
+                break;
+            case "combofist2":
+                ParticleController.Instance.spawnCwKick2();
+                break;
+            case "blood2":
+                ParticleController.Instance.bloodshedHead2();
                 break;
             default:
                 break;
