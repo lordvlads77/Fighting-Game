@@ -1,5 +1,5 @@
+using System.Net.NetworkInformation;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class ParticleController : MonoBehaviour
 {
@@ -24,28 +24,29 @@ public class ParticleController : MonoBehaviour
     [Header("Blood Body VFX")]
     [SerializeField] private GameObject _bloodBodyVFX = default;
     [SerializeField] private Transform _bodyBlood = default;
-    
-    [FormerlySerializedAs("_hardPunchie")]
-    [Header("Player 2")]
-    [SerializeField] private Transform _hardPunchie2 = default;
-    [SerializeField] private GameObject _hardPunchieVFX2 = default;
-    [Header("Medium Punch VFX")]
-    [SerializeField] private GameObject _mPunchieVFX2 = default;
-    [SerializeField] private Transform _MedPunchies2 = default;
-    [Header("Light Punch VFX")]
-    [SerializeField] private GameObject _lghtPunchieVFX2 = default;
-    [SerializeField] private Transform _lPunchies2 = default;
-    [Header("Combo Wombo VFX")]
-    [SerializeField] private GameObject _comboWomboVFX2 = default;
-    [SerializeField] private Transform _CWPunchies2 = default;
+
     [Header("Block GameObj")]
     [SerializeField] private GameObject _blockk2 = default;
-    [Header("Blood Head VFX")]
-    [SerializeField] private GameObject _blodSpwanVFX2 = default;
-    [SerializeField] private Transform _bloodsieSpawnear2 = default;
-    [Header("Blood Body VFX")]
-    [SerializeField] private GameObject _bloodBodyVFX2 = default;
-    [SerializeField] private Transform _bodyBlood2 = default;
+    
+    [Header("Hard Punch P2")]
+    [SerializeField] private Transform _harde = default;
+    [SerializeField] private GameObject _hardeFX = default;
+    [Header("Medium Punch P2")]
+    [SerializeField] private Transform _mediu = default;
+    [SerializeField] private GameObject _mediuFX = default;
+    [Header("Light Punch P2")]
+    [SerializeField] private Transform _ligt = default;
+    [SerializeField] private GameObject _ligtFX = default;
+    [Header("Combo Punch P2")]
+    [SerializeField] private Transform _combo = default;
+    [SerializeField] private GameObject _comboFX = default;
+    [Header("Bloodshed Head")]
+    [SerializeField] private Transform _headBloodd = default;
+    [SerializeField] private GameObject _headBloodFX = default;
+    [Header("Bloodshed Body P2")]
+    [SerializeField] private Transform _bloodyBody = default;
+    [SerializeField] private GameObject _bloodyBodyFX = default;
+
     private void Awake()
     {
         Instance = this;
@@ -94,26 +95,7 @@ public class ParticleController : MonoBehaviour
     {
         GameObject Bloodbod = Instantiate(_bloodBodyVFX, _bodyBlood.position, _bodyBlood.rotation);
     }
-    public void spawnHardPunch2()
-    {
-        GameObject SpawnerHardHit2 = Instantiate(_hardPunchieVFX2, _hardPunchie2.position, _hardPunchie2.rotation);
-    }
-
-    public void spawnMediumPunch2()
-    {
-        GameObject SpawnerMPunch2 = Instantiate(_mPunchieVFX2, _MedPunchies2.position, _MedPunchies2.rotation);
-    }
-
-    public void spawnLightoPunch2()
-    {
-        GameObject SpawnerLightoPunch2 = Instantiate(_lghtPunchieVFX2, _lPunchies2.position, _lPunchies2.rotation);
-    }
-
-    public void spawnCwKick2()
-    {
-        GameObject KickComboW2 = Instantiate(_comboWomboVFX2, _CWPunchies2.position, _CWPunchies2.rotation);
-    }
-
+    
     public void blok2()
     {
         _blockk2.SetActive(true);
@@ -123,14 +105,34 @@ public class ParticleController : MonoBehaviour
     {
         _blockk2.SetActive(false);
     }
-    
-    public void bloodshedHead2()
+
+    public void Hard()
     {
-        GameObject headBlood2 = Instantiate(_blodSpwanVFX2, _bloodsieSpawnear2.position, _bloodsieSpawnear2.rotation);
+        GameObject HaP = Instantiate(_hardeFX, _harde.position, _harde.rotation);
     }
 
-    public void BodBlood2()
+    public void Medium()
     {
-        GameObject Bloodbod2 = Instantiate(_bloodBodyVFX2, _bodyBlood2.position, _bodyBlood2.rotation);
+        GameObject MaP = Instantiate(_mediuFX, _mediu.position, _mediu.rotation);
+    }
+
+    public void Light()
+    {
+        GameObject LaP = Instantiate(_ligtFX, _ligt.position, _ligt.rotation);
+    }
+
+    public void Wombo()
+    {
+        GameObject CaP = Instantiate(_comboFX, _combo.position, _combo.rotation);
+    }
+
+    public void BloHe()
+    {
+        GameObject HeBlod = Instantiate(_headBloodFX, _headBloodd.position, _headBloodd.rotation);
+    }
+
+    public void BloyBod()
+    {
+        GameObject BodBloy = Instantiate(_bloodyBodyFX, _bloodyBody.position, _bloodyBody.rotation);
     }
 }

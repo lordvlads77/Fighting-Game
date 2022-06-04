@@ -17,6 +17,13 @@ TagManager:
   - bigfist2
   - combofist2
   - blood2
+  - HardHit
+  - bloodbod2
+  - blood
+  - MediumHit
+  - LightHit
+  - ComboHits
+  - bloodbod
   layers:
   - Default
   - TransparentFX

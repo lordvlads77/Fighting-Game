@@ -1,4 +1,5 @@
 using System;
+using System.Net.NetworkInformation;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -13,6 +14,14 @@ public class DamageSystem : MonoBehaviour
     [Header("Dynamic Win Sys")]
     [SerializeField] private TextMeshProUGUI _winnerName = default;
     [SerializeField] private int _PlayerWinner = default;
+    
+    [Header("Working Particules Sys")]
+    [SerializeField] private GameObject _HaaP = default;
+    [SerializeField] private GameObject _MeeP = default;
+    [SerializeField] private GameObject _LiiP = default;
+    [SerializeField] private GameObject _CooP = default;
+    [SerializeField] private GameObject _BloodH = default;
+    [SerializeField] private GameObject _BloodBody = default;
     
     public void MinusLife(int amount)
     {
@@ -39,8 +48,6 @@ public class DamageSystem : MonoBehaviour
             case "smallFist":
                 MinusLife(1);
                 SoundController.Instance.LightHitSFX();
-                ParticleController.Instance.spawnLightoPunch();
-                ParticleController.Instance.BodBlood();
                 break;
             case "mediumFist":
                 MinusLife(2);
@@ -51,8 +58,31 @@ public class DamageSystem : MonoBehaviour
             case "bigFist":
                 MinusLife(3);
                 SoundController.Instance.HardHitSFX();
-                ParticleController.Instance.spawnHardPunch();
                 ParticleController.Instance.bloodshedHead();
+                if (_HaaP.CompareTag("HardHit"))
+                {
+                    ParticleController.Instance.spawnHardPunch();
+                }
+                else if (_HaaP.CompareTag("bigfist2"))
+                {
+                    ParticleController.Instance.Hard();
+                }
+                if (_BloodH.CompareTag("blood"))
+                {
+                    ParticleController.Instance.bloodshedHead();   
+                }
+                else if (_BloodH.CompareTag("blood2"))
+                {
+                    ParticleController.Instance.BloHe();
+                }
+                if (_BloodH.CompareTag("bloodbod"))
+                {
+                    ParticleController.Instance.BodBlood();
+                }
+                else if (_BloodH.CompareTag("bloodbod2"))
+                {
+                    ParticleController.Instance.BloyBod();
+                }
                 break;
             case "block":
                 MinusLife(0);
@@ -62,21 +92,6 @@ public class DamageSystem : MonoBehaviour
                 SoundController.Instance.KickMoveSFX();
                 ParticleController.Instance.spawnCwKick();
                 ParticleController.Instance.bloodshedHead();
-                break;
-            case "smallfist2":
-                ParticleController.Instance.spawnLightoPunch2();
-                break;
-            case "mediumfist2":
-                ParticleController.Instance.spawnMediumPunch2();
-                break;
-            case "bigfist2":
-                ParticleController.Instance.spawnHardPunch2();
-                break;
-            case "combofist2":
-                ParticleController.Instance.spawnCwKick2();
-                break;
-            case "blood2":
-                ParticleController.Instance.bloodshedHead2();
                 break;
             default:
                 break;
