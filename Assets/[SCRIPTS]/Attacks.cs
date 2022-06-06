@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Attacks : MonoBehaviour
 {
-     [SerializeField] private GameObject _smallFist = default;
+     [SerializeField] public GameObject _smallFist = default;
      [SerializeField] private GameObject _mediumFist = default;
      [SerializeField] private GameObject _bigFist = default;
      [SerializeField] private KeyCode _lightAttack = default;

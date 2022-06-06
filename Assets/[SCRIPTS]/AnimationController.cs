@@ -10,6 +10,7 @@ public class AnimationController : MonoBehaviour
     private readonly int _ahBlock = Animator.StringToHash("block");
     private readonly int _ahSpeed = Animator.StringToHash("speed");
     private readonly int _ahJump = Animator.StringToHash("jump");
+    private readonly int _aTakingSmallP = Animator.StringToHash("takingSP");
 
     [Header("Reference")]
     Movement movement;
@@ -45,5 +46,10 @@ public class AnimationController : MonoBehaviour
     public void Block(Animator animm)
     {
         animm.SetTrigger(_ahBlock);
+    }
+
+    public void TakingLightPunch(Animator animm)
+    {
+        animm.SetTrigger(_aTakingSmallP);
     }
 }

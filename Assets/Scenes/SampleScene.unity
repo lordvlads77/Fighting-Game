@@ -4658,6 +4658,9 @@ MonoBehaviour:
   _CooP: {fileID: 1253117185}
   _BloodH: {fileID: 67236613}
   _BloodBody: {fileID: 631987115}
+  _animator: {fileID: 1012353318}
+  _attacks: {fileID: 1472459250}
+  _ControlsDisTime: 3
 --- !u!114 &1012353321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7007,6 +7010,17 @@ MonoBehaviour:
   _medHitSfx: {fileID: 8300000, guid: fe046d348a4721d449cdce8ac90b4232, type: 3}
   _hardHittSfx: {fileID: 8300000, guid: 8783bf66f21b07c4080ef53913c8eaa2, type: 3}
   _kickSfx: {fileID: 8300000, guid: 7c820c3762b72ec40b9acf56f17c3dc9, type: 3}
+--- !u!114 &1472459250 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6834559866085778518, guid: 146307db11e646f4e9b9ed16f2241fa6, type: 3}
+  m_PrefabInstance: {fileID: 6834559866781962173}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1472459247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1691fb4f3884da441b6b0aad4cfcba91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1472459251 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6834559866912797247, guid: 146307db11e646f4e9b9ed16f2241fa6, type: 3}
@@ -9675,6 +9689,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2106953031}
     - target: {fileID: 6834559866085778518, guid: 146307db11e646f4e9b9ed16f2241fa6, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6834559866085778518, guid: 146307db11e646f4e9b9ed16f2241fa6, type: 3}
       propertyPath: _battleCryH
       value: 
       objectReference: {fileID: 8300000, guid: 9b4c8feefa0f98e44a7bde61b6ac224b, type: 3}
@@ -9771,6 +9789,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2090719551}
     - target: {fileID: 6834559866085778523, guid: 146307db11e646f4e9b9ed16f2241fa6, type: 3}
+      propertyPath: _attacks
+      value: 
+      objectReference: {fileID: 1012353321}
+    - target: {fileID: 6834559866085778523, guid: 146307db11e646f4e9b9ed16f2241fa6, type: 3}
       propertyPath: _kickSfx
       value: 
       objectReference: {fileID: 8300000, guid: 7c820c3762b72ec40b9acf56f17c3dc9, type: 3}
@@ -9781,7 +9803,7 @@ PrefabInstance:
     - target: {fileID: 6834559866085778523, guid: 146307db11e646f4e9b9ed16f2241fa6, type: 3}
       propertyPath: _animator
       value: 
-      objectReference: {fileID: 1012353318}
+      objectReference: {fileID: 1582930481}
     - target: {fileID: 6834559866085778523, guid: 146307db11e646f4e9b9ed16f2241fa6, type: 3}
       propertyPath: _BloodBody
       value: 
@@ -9814,6 +9836,10 @@ PrefabInstance:
       propertyPath: _lightHittSFX
       value: 
       objectReference: {fileID: 8300000, guid: 6285698432a82ae428968184f6b6a94c, type: 3}
+    - target: {fileID: 6834559866085778523, guid: 146307db11e646f4e9b9ed16f2241fa6, type: 3}
+      propertyPath: _ControlsDisTime
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6834559866566255982, guid: 146307db11e646f4e9b9ed16f2241fa6, type: 3}
       propertyPath: m_Layer
       value: 3
@@ -10141,6 +10167,19 @@ PrefabInstance:
     - target: {fileID: 6834559866916169523, guid: 146307db11e646f4e9b9ed16f2241fa6, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6834559866920405505, guid: 146307db11e646f4e9b9ed16f2241fa6, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6834559866920405505, guid: 146307db11e646f4e9b9ed16f2241fa6, type: 3}
+      propertyPath: m_WarningMessage
+      value: "\nBinding warning: Some generic clip(s) animate transforms that are
+        already bound by a Humanoid avatar. These transforms can only be changed
+        by Humanoid clips.\n\tTransform 'Root'\n\tTransform 'IndexFinger_02'\n\tTransform
+        'Elbow_R'\n\tTransform 'Finger_02'\n\tTransform 'Finger_03'\n\tTransform
+        'Ball_L'\n\tTransform 'Thumb_02'\n\tTransform 'Ball_R'\n\tTransform 'Clavicle_L'\n\tTransform
+        'Finger_01'\n\tand more ...\n\tFrom animation clip 'mixamo.com'"
       objectReference: {fileID: 0}
     - target: {fileID: 6834559866986835108, guid: 146307db11e646f4e9b9ed16f2241fa6, type: 3}
       propertyPath: m_Layer

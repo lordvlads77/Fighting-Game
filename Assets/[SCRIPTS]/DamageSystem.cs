@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -20,6 +21,11 @@ public class DamageSystem : MonoBehaviour
     [SerializeField] private GameObject _CooP = default;
     [SerializeField] private GameObject _BloodH = default;
     [SerializeField] private GameObject _BloodBody = default;
+
+    [Header("Taking Damage Stuff")]
+    [SerializeField] private Animator _animator = default;
+    [SerializeField] private Attacks _attacks = default;
+    [SerializeField] private float _ControlsDisTime = default;
     
     public void MinusLife(int amount)
     {
@@ -70,6 +76,8 @@ public class DamageSystem : MonoBehaviour
                 {
                     ParticleController.Instance.BloyBod();
                 }
+                StartCoroutine(takinglightDamage());
+                Debug.Log(StartCoroutine(takinglightDamage()));
                 break;
             case "mediumFist":
                 MinusLife(2);
@@ -169,5 +177,16 @@ public class DamageSystem : MonoBehaviour
     public void WinnerUIChange()
     {
         GameManager.Instance.PlayerWin(_winnerName, _playerNumber, _PlayerWinner);
+    }
+
+    IEnumerator takinglightDamage()
+    {
+        AnimationController.Instance.TakingLightPunch(_animator);
+        _attacks._smallFist.SetActive(false);
+        _attacks.enabled = false;
+        yield return new WaitForSeconds(_ControlsDisTime);
+        _attacks.enabled = true;
+        yield break;
+
     }
 }
