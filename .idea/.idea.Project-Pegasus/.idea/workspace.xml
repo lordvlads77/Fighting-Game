@@ -6,15 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="3a17a00c-3af9-4c60-ad81-2e00aff315f6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project-Pegasus/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project-Pegasus/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Impacts/CFXR Big Impact HDR.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Impacts/CFXR Big Impact HDR.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/[SCRIPTS]/AnimationController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[SCRIPTS]/AnimationController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/[SCRIPTS]/DamageSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[SCRIPTS]/DamageSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/[SCRIPTS]/GUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[SCRIPTS]/GUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/[SCRIPTS]/Movement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[SCRIPTS]/Movement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/[SCRIPTS]/ParticleController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[SCRIPTS]/ParticleController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/[SCRIPTS]/ParticleControllerP2.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/[SCRIPTS]/ParticleControllerP2.cs.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +26,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="SWEA" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="25d16OUIwO9Yo66YVFbKZOHFMW9" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -131,6 +124,8 @@
       <workItem from="1654296049763" duration="8290000" />
       <workItem from="1654399803453" duration="5039000" />
       <workItem from="1654406344109" duration="174000" />
+      <workItem from="1654570402903" duration="3837000" />
+      <workItem from="1654602325877" duration="1308000" />
     </task>
     <servers />
   </component>
