@@ -4660,7 +4660,7 @@ MonoBehaviour:
   _BloodBody: {fileID: 631987115}
   _animator: {fileID: 1012353318}
   _attacks: {fileID: 1472459250}
-  _ControlsDisTime: 3
+  _ControlsDisTime: 2
 --- !u!114 &1012353321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9838,7 +9838,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 6285698432a82ae428968184f6b6a94c, type: 3}
     - target: {fileID: 6834559866085778523, guid: 146307db11e646f4e9b9ed16f2241fa6, type: 3}
       propertyPath: _ControlsDisTime
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6834559866566255982, guid: 146307db11e646f4e9b9ed16f2241fa6, type: 3}
       propertyPath: m_Layer
@@ -9862,7 +9862,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6834559866912797247, guid: 146307db11e646f4e9b9ed16f2241fa6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.5
+      value: 0.43
       objectReference: {fileID: 0}
     - target: {fileID: 6834559866912797247, guid: 146307db11e646f4e9b9ed16f2241fa6, type: 3}
       propertyPath: m_LocalRotation.w
