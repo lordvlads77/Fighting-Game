@@ -7,10 +7,11 @@ public class AnimationController : MonoBehaviour
     private readonly int _ahMpunch = Animator.StringToHash("mediumPunch");
     private readonly int _ahHpunch = Animator.StringToHash("hardPunch");
     private readonly int _ahCombopunch = Animator.StringToHash("comboPunch");
-    private readonly int _ahBlock = Animator.StringToHash("block");
     private readonly int _ahSpeed = Animator.StringToHash("speed");
     private readonly int _ahJump = Animator.StringToHash("jump");
     private readonly int _aTakingSmallP = Animator.StringToHash("takingSP");
+    private readonly int _aTakingMediumP = Animator.StringToHash("takingMP");
+    private readonly int _aTakingBigP = Animator.StringToHash("takingGP");
 
     [Header("Reference")]
     Movement movement;
@@ -42,14 +43,19 @@ public class AnimationController : MonoBehaviour
     {
         animm.SetTrigger(_ahCombopunch);
     }
-
-    public void Block(Animator animm)
-    {
-        animm.SetTrigger(_ahBlock);
-    }
-
+    
     public void TakingLightPunch(Animator animm)
     {
         animm.SetTrigger(_aTakingSmallP);
+    }
+
+    public void TakingMediumPunch(Animator animm)
+    {
+        animm.SetTrigger(_aTakingMediumP);
+    }
+
+    public void TakingHardPunch(Animator animm)
+    {
+        animm.SetTrigger(_aTakingBigP);
     }
 }

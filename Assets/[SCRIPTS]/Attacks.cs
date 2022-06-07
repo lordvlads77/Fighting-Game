@@ -3,12 +3,12 @@ using UnityEngine;
 public class Attacks : MonoBehaviour
 {
      [SerializeField] public GameObject _smallFist = default;
-     [SerializeField] private GameObject _mediumFist = default;
-     [SerializeField] private GameObject _bigFist = default;
+     [SerializeField] public GameObject _mediumFist = default;
+     [SerializeField] public GameObject _bigFist = default;
      [SerializeField] private KeyCode _lightAttack = default;
      [SerializeField] private KeyCode _mediumAttack = default;
      [SerializeField] private KeyCode _hardAttack = default;
-     [SerializeField] private GameObject _ComboFist = default;
+     [SerializeField] public GameObject _ComboFist = default;
      [SerializeField] private KeyCode _ComboAttack = default;
      [SerializeField] private KeyCode _CombondKey = default;
      [SerializeField] private GameObject _blockFist = default;
@@ -72,7 +72,6 @@ public class Attacks : MonoBehaviour
         if (Input.GetKeyDown(_blockMove))
         {
             _blockFist.SetActive(true);
-            AnimationController.Instance.Block(anim);
             if (_blockob.CompareTag("block"))
             {
                 ParticleController.Instance.blok();

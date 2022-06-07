@@ -26,7 +26,7 @@ public class DamageSystem : MonoBehaviour
     [SerializeField] private Animator _animator = default;
     [SerializeField] private Attacks _attacks = default;
     [SerializeField] private float _ControlsDisTime = default;
-    
+
     public void MinusLife(int amount)
     {
         for (int i = 0; i < amount; i++)
@@ -77,7 +77,6 @@ public class DamageSystem : MonoBehaviour
                     ParticleController.Instance.BloyBod();
                 }
                 StartCoroutine(takinglightDamage());
-                Debug.Log(StartCoroutine(takinglightDamage()));
                 break;
             case "mediumFist":
                 MinusLife(2);
@@ -106,11 +105,11 @@ public class DamageSystem : MonoBehaviour
                 {
                     ParticleController.Instance.BloyBod();
                 }
+                StartCoroutine(takingMediumDamage());
                 break;
             case "bigFist":
                 MinusLife(3);
                 SoundController.Instance.HardHitSFX();
-                ParticleController.Instance.bloodshedHead();
                 if (_HaaP.CompareTag("HardHit"))
                 {
                     ParticleController.Instance.spawnHardPunch();
@@ -135,6 +134,7 @@ public class DamageSystem : MonoBehaviour
                 {
                     ParticleController.Instance.BloyBod();
                 }
+                StartCoroutine(takingBigDamage());
                 break;
             case "block":
                 MinusLife(0);
@@ -188,5 +188,24 @@ public class DamageSystem : MonoBehaviour
         _attacks.enabled = true;
         yield break;
 
+    }
+
+    IEnumerator takingMediumDamage()
+    {
+        AnimationController.Instance.TakingMediumPunch(_animator);
+        _attacks._smallFist.SetActive(false);
+        _attacks._mediumFist.SetActive(false);
+        _attacks.enabled = false;
+        yield return new WaitForSeconds(_ControlsDisTime);
+        _attacks.enabled = true;
+    }
+
+    IEnumerator takingBigDamage()
+    {
+        AnimationController.Instance.TakingHardPunch(_animator);
+        _attacks._bigFist.SetActive(false);
+        _attacks.enabled = false;
+        yield return new WaitForSeconds(_ControlsDisTime);
+        _attacks.enabled = true;
     }
 }
