@@ -167,6 +167,7 @@ public class DamageSystem : MonoBehaviour
                 {
                     ParticleController.Instance.BloyBod();
                 }
+                StopCoroutine(takingComboDamage());
                 break;
             default:
                 break;
@@ -204,6 +205,15 @@ public class DamageSystem : MonoBehaviour
     {
         AnimationController.Instance.TakingHardPunch(_animator);
         _attacks._bigFist.SetActive(false);
+        _attacks.enabled = false;
+        yield return new WaitForSeconds(_ControlsDisTime);
+        _attacks.enabled = true;
+    }
+
+    IEnumerator takingComboDamage()
+    {
+        AnimationController.Instance.TakingComboPunch(_animator);
+        _attacks._ComboFist.SetActive(false);
         _attacks.enabled = false;
         yield return new WaitForSeconds(_ControlsDisTime);
         _attacks.enabled = true;
