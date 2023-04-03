@@ -1,17 +1,15 @@
+ 
 using UnityEngine;
 using UnityEngine.Serialization;
 
 public class Movement : MonoBehaviour
 {
     [SerializeField] private float _speed = default;
-    [SerializeField] private int _jumpSpeed = default;
     [SerializeField] public GameObject _screenPause = default;
     [SerializeField] private KeyCode _horizontalL = default;
     [SerializeField] private KeyCode _horizontalR = default;
-    [SerializeField] private KeyCode _jumpL = default;
     [SerializeField] private KeyCode _pause = default;
-    [SerializeField] private KeyCode _flipCharacter = default;
-    
+
     [Header("Animation Stuff")]
     [SerializeField] private Animator _animator = default;
     private readonly int _ahSpeed = Animator.StringToHash("speed");
@@ -42,10 +40,6 @@ public class Movement : MonoBehaviour
             Move(-1);
             _animator.SetInteger(_ahSpeed, 2);
         }
-        if (Input.GetKeyDown(_flipCharacter))
-        {
-            transform.Rotate(0, 180, 0);
-        }
         if (Input.GetKeyUp(_horizontalL))
         {
             _animator.SetInteger(_ahSpeed, 1);
@@ -54,11 +48,6 @@ public class Movement : MonoBehaviour
         {
             Move(1);
             _animator.SetInteger(_ahSpeed, 4);
-        }
-        if (Input.GetKeyDown(_jumpL) && _isGround)
-        {
-            Jump();
-            _animator.SetTrigger(_ahJump);
         }
         if (Input.GetKeyDown(_pause))
         {
@@ -73,11 +62,6 @@ public class Movement : MonoBehaviour
     public void Move(int direction)
     {
         transform.Translate(0, 0, direction * _speed * Time.deltaTime);
-    }
-    
-    public void Jump()
-    {   
-        _rigidbody.AddForce(Vector3.up * _jumpSpeed);
     }
 
     public void Pause()

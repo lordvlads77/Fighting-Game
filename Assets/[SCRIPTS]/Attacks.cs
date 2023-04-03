@@ -46,8 +46,8 @@ public class Attacks : MonoBehaviour
         }
         if (Input.GetKeyDown(_mediumAttack))
         {
-            _smallFist.SetActive(true);
-            _smallFist.GetComponent<BoxCollider>().enabled = false;
+            //_smallFist.SetActive(true);
+            //_smallFist.GetComponent<BoxCollider>().enabled = false;
             _mediumFist.SetActive(true);
             AnimationController.Instance.MediumPuch(anim);
             SoundController.Instance.BattleCryLightMedium();
@@ -55,8 +55,8 @@ public class Attacks : MonoBehaviour
         }
         if (Input.GetKeyUp(_mediumAttack))
         {
-            _smallFist.SetActive(false);
-            _smallFist.GetComponent<BoxCollider>().enabled = true;
+            //_smallFist.GetComponent<BoxCollider>().enabled = true;
+            //_smallFist.SetActive(false);
             _mediumFist.SetActive(false);
         }
         if (Input.GetKeyDown(_hardAttack))
