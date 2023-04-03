@@ -7,7 +7,7 @@
     <list default="true" id="3a17a00c-3af9-4c60-ad81-2e00aff315f6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project-Pegasus/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project-Pegasus/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/[SCRIPTS]/Attacks.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[SCRIPTS]/Attacks.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[SCRIPTS]/GUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[SCRIPTS]/GUI.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +57,7 @@
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="E:/Project Codename Pegasus\Fighting Game.exe" />
+      <option name="EXE_PATH" value="D:/Imperator Studios/Builds\Knight Brawlers.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="E:\Project Codename Pegasus" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -145,6 +145,7 @@
       <workItem from="1680485186519" duration="910000" />
       <workItem from="1680486822567" duration="904000" />
       <workItem from="1680490064192" duration="1094000" />
+      <workItem from="1680493080306" duration="3455000" />
     </task>
     <servers />
   </component>

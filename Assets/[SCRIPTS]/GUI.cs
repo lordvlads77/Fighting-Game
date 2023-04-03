@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 
 namespace KnightBrawlers
 {
@@ -16,6 +17,9 @@ namespace KnightBrawlers
         [SerializeField] private GameObject _player1KeysPanel = default;
         [SerializeField] private GameObject _player2KeysPanel = default;
         [SerializeField] private GameObject _screenPause = default;
+        [FormerlySerializedAs("_inGamep1kyebinds")] [SerializeField] private GameObject _inGameP1Keybinds = default;
+        [SerializeField] private GameObject _inGameP2Keybinds = default;
+        [FormerlySerializedAs("_inGameKeys")] [SerializeField] private GameObject _inGameKeysScreen = default;
         [Header("Sound Stuff")]
         [SerializeField] public AudioSource _lobbyMusic = default;
         [SerializeField] public AudioSource _battleMusic = default;
@@ -104,7 +108,7 @@ namespace KnightBrawlers
 
         public void okeyReturntoHomeP1()
         {
-            _player1KeysPanel.SetActive(false);
+            _inGameP1Keybinds.SetActive(false);
             Time.timeScale = 1;
             _lobbyMusic.enabled = false;
             _battleMusic.enabled = true;
@@ -112,7 +116,7 @@ namespace KnightBrawlers
 
         public void okeyReturntoHomeP2()
         {
-            _player2KeysPanel.SetActive(false);
+            _inGameP2Keybinds.SetActive(false);
             Time.timeScale = 1;
             _lobbyMusic.enabled = false;
             _battleMusic.enabled = true;
@@ -130,6 +134,36 @@ namespace KnightBrawlers
             Time.timeScale = 0;
             _battleMusic.enabled = false;
             _lobbyMusic.enabled = true;
+        }
+        
+        public void inGameKeybinds()
+        {
+            _screenPause.SetActive(false);
+            _inGameKeysScreen.SetActive(true);
+        }
+        
+        public void inGameKeysP1()
+        {
+            _inGameKeysScreen.SetActive(false);
+            _inGameP1Keybinds.SetActive(true);
+        }
+        
+        public void inGameKeysP2()
+        {
+            _inGameKeysScreen.SetActive(false);
+            _inGameP2Keybinds.SetActive(true);
+        }
+        
+        public void inGamePlayerKeysP1()
+        {
+            _inGameP1Keybinds.SetActive(false);
+            _inGameKeysScreen.SetActive(true);
+        }
+        
+        public void inGamePlayerKeysP2()
+        {
+            _inGameP2Keybinds.SetActive(false);
+            _inGameKeysScreen.SetActive(true);
         }
 
         public void hoverSFX()
