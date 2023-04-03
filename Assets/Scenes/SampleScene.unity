@@ -4612,8 +4612,8 @@ MonoBehaviour:
   _speed: 4.5
   _jumpSpeed: 200
   _screenPause: {fileID: 1106995812}
-  _horizontalL: 260
-  _horizontalR: 262
+  _horizontalL: 262
+  _horizontalR: 260
   _jumpL: 256
   _pause: 8
   _flipCharacter: 268
